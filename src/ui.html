@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>UI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    //= template/common/header.html
+
+    <div class="page__content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">Услуги и цены</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    Оформление медкнижек в Ивантеевке
+                </li>
+            </ul>
+
+            <h2>Кнопки</h2>
+
+            <button class="button button--primary" type="button">Кнопка</button>
+
+            <a class="button button--primary" href="#">Ссылка</a>
+
+            <button class="button button--primary" type="button" disabled>Кнопка</button>
+
+            <a class="button button--primary disabled">Ссылка</a>
+
+            <br> <br>
+
+            <button class="button button--secondary" type="button">Кнопка</button>
+
+            <a class="button button--secondary" href="#">Ссылка</a>
+
+            <button class="button button--secondary" type="button" disabled>Кнопка</button>
+
+            <a class="button button--secondary disabled">Ссылка</a>
+
+            <br> <br>
+
+            <h2>Чекбоксы</h2>
+
+            <label class="checkbox">
+                <input type="checkbox" value="" name="">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br>
+
+            <label class="checkbox">
+                <input type="checkbox" value="" name="" checked>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br>
+
+            <label class="checkbox">
+                <input type="checkbox" value="" name="" disabled>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br>
+
+            <label class="checkbox">
+                <input type="checkbox" value="" name="" disabled checked>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br> <br>
+
+            <h2>Поля ввода</h2>
+
+            <div class="input-group">
+                <input class="input" type="text" name="" placeholder="Ваш email">
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <input class="input error" type="text" name="" placeholder="Ваш email">
+
+                <p class="error-text">Заполните это поле</p>
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <input class="input" type="text" name="" placeholder="Ваш email" disabled>
+            </div>
+
+            <br>
+
+
+            <div class="input-group">
+                <textarea class="textarea" placeholder="Ваш комментарий"></textarea>
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <textarea class="textarea error" placeholder="Ваш комментарий"></textarea>
+
+                <p class="error-text">Заполните это поле</p>
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <textarea class="textarea" placeholder="Ваш комментарий" disabled></textarea>
+            </div>
+        </div>
+    </div>
+
+    //= template/common/footer.html
+
+    //= template/common/scripts.html
+</body>
+
+</html>

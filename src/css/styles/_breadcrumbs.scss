@@ -1,0 +1,44 @@
+.breadcrumbs {
+    @include list-reset;
+    display: flex;
+    font-size: 12px;
+    gap: 8px;
+    line-height: 1.2;
+    margin-left: calc(0.01px - var(--container_padding));
+    margin-right: calc(0.01px - var(--container_padding));
+    overflow-x: auto;
+    padding: 20px var(--container_padding);
+    scrollbar-width: none;
+    white-space: nowrap;
+    @media(min-width: $sm) {
+        font-size: 14px;
+    }
+    @media(min-width: $hd) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__item {
+        &:last-child {
+            opacity: 0.4;
+        }
+
+        &:not(:last-child) {
+            align-items: center;
+            display: flex;
+            gap: 8px;
+
+            &::after {
+                border-radius: 50%;
+                background-color: currentColor;
+                content: '';
+                height: 2px;
+                width: 2px;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}

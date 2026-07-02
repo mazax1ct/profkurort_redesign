@@ -1,0 +1,21 @@
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$hd: 1200px;
+$lg: 1400px;
+$fhd: 1900px;
+
+:root {
+    --deep_blue: #1E3E73;
+    --blue: #5B8FC6;
+    --red: #E76D6A;
+    --green: #8DBDB6;
+    --beige: #F7F4EF;
+    --grey: #f2f3f8;
+    --base_size: 8px;
+    --base_font_size: calc(var(--base_size) * 2);
+    --container_padding: calc(var(--base_size) * 2);
+    --header_min_height: calc(var(--base_size) * 8);
+    --container_max_width: calc(var(--base_size) * 160);
+    --primary_font: 'Montserrat', Arial, sans-serif;
+}
