@@ -1,5 +1,5 @@
 @mixin scrollbar {
-    scrollbar-color: var(--blue_5) transparent;
+    scrollbar-color: var(--primary-color) transparent;
     scrollbar-width: thin;
 }
 @mixin list-reset {
@@ -28,6 +28,9 @@
     }
 }
 @mixin active-area {
+    position: relative;
+    z-index: 1;
+
     &::after {
         content: '';
         height: 100%;

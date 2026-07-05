@@ -2,24 +2,18 @@
     align-items: center;
     border: 2px solid transparent;
     border-radius: 8px;
-    color: var(--black);
     cursor: pointer;
     display: inline-flex;
-    font-family: var(--primary_font);
-    font-size: 14px;
-    font-weight: 600;
-    gap: 10px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    gap: 8px;
     justify-content: center;
     line-height: 1.5;
-    height: 52px;
-    padding: 8px;
+    height: 40px;
+    padding: 4px 16px;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s;
-    @media(min-width: $hd) {
-        font-size: 16px;
-        height: 56px;
-    }
 
     &.disabled,
     &:disabled,
@@ -29,34 +23,14 @@
     }
 
     &--primary {
-        background-color: var(--beige);
-
-        &:not(.disabled),
-        &:not(:disabled),
-        &:not([data-disabled]) {
-            @include hover {
-                background-color: #FFE1A1;
-                color: var(--rich_green);
-            }
-        }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--border_grey);
-            color: #fff;
-        }
-    }
-
-    &--secondary {
-        background-color: var(--rich_green);
+        background-color: var(--primary-color);
         color: #fff;
 
         &:not(.disabled),
         &:not(:disabled),
         &:not([data-disabled]) {
             @include hover {
-                background-color: var(--leaf_green);
+                background-color: var(--primary-color-hover);
                 color: #fff;
             }
         }
@@ -64,67 +38,115 @@
         &.disabled,
         &:disabled,
         &[data-disabled] {
-            background-color: var(--border_grey);
+            background-color: var(--grey-color);
             color: #fff;
         }
     }
 
-    &--outline_dark {
-        background-color: transparent;
-        border: 2px solid var(--rich_green);
-        color: var(--black);
-
-        &:not(.disabled),
-        &:not(:disabled),
-        &:not([data-disabled]) {
-            @include hover {
-                border-color: var(--leaf_green);
-                color: var(--leaf_green);
-            }
-        }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--border_grey);
-            border: none;
-            color: #fff;
-        }
-    }
-
-    &--outline_white {
-        background-color: transparent;
-        border: 2px solid #fff;
+    &--secondary {
+        background-color: var(--secondary-color);
         color: #fff;
 
         &:not(.disabled),
         &:not(:disabled),
         &:not([data-disabled]) {
             @include hover {
-                border-color: var(--beige);
-                color: var(--beige);
+                background-color: var(--secondary-color-hover);
+                color: #fff;
             }
         }
 
         &.disabled,
         &:disabled,
         &[data-disabled] {
-            background-color: var(--border_grey);
-            border: none;
+            background-color: var(--grey-color);
             color: #fff;
         }
     }
 
-    &--link {
-        font-size: 16px;
-        font-weight: 400;
-        text-decoration: underline;
+    &--success {
+        background-color: var(--success-color);
+        color: #fff;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--success-color-hover);
+                color: #fff;
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: var(--grey-color);
+            color: #fff;
+        }
     }
 
-    &--h_40 {
-        height: 40px;
-        padding-left: 30px;
-        padding-right: 30px;
+    &--warning {
+        background-color: var(--warning-color);
+        color: #fff;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--warning-color-hover);
+                color: #fff;
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: var(--grey-color);
+            color: #fff;
+        }
+    }
+
+    &--danger {
+        background-color: var(--danger-color);
+        color: #fff;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: #c35d5a;
+                color: #fff;
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: var(--grey-color);
+            color: #fff;
+        }
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                border-color: var(--secondary-color);
+                color: var(--secondary-color);
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            border-color: var(--grey-color);
+            color: var(--grey-color);
+        }
     }
 
     &--wide {
@@ -133,8 +155,8 @@
 
     svg {
         fill: currentColor;
-        height: 24px;
-        min-width: 24px;
-        width: 24px;
+        height: 16px;
+        min-width: 16px;
+        width: 16px;
     }
 }

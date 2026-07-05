@@ -6,16 +6,22 @@ $lg: 1400px;
 $fhd: 1900px;
 
 :root {
-    --deep_blue: #1E3E73;
-    --blue: #5B8FC6;
-    --red: #E76D6A;
-    --green: #8DBDB6;
-    --beige: #F7F4EF;
-    --grey: #f2f3f8;
-    --base_size: 8px;
-    --base_font_size: calc(var(--base_size) * 2);
-    --container_padding: calc(var(--base_size) * 2);
-    --header_min_height: calc(var(--base_size) * 8);
-    --container_max_width: calc(var(--base_size) * 160);
-    --primary_font: 'Montserrat', Arial, sans-serif;
+    --primary-color: #1E3E73;
+    --primary-color-hover: #152c52;
+    --secondary-color: #5B8FC6;
+    --secondary-color-hover: #4c77a4;
+    --danger-color: #E76D6A;
+    --danger-color-hover: #d66562;
+    --success-color: #8DBDB6;
+    --success-color-hover: #7ba49e;
+    --warning-color: #ecc16f;
+    --warning-color-hover: #dab368;
+    --beige-color: #F7F4EF;
+    --grey-color: #C7CEDE;
+    --dark-grey-color: #6B7686;
+    --base-font-size: 16px;
+    --container-padding: 16px;
+    --header-min-height: 80px;
+    --container-max-width: 1192px;
+    --primary-font: 'Montserrat', Arial, sans-serif;
 }

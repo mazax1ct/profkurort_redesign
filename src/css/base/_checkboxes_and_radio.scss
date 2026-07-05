@@ -11,9 +11,9 @@
         width: 1px;
 
         &:checked ~ .checkbox__icon {
-            background-color: var(--rich_green);
+            background-color: var(--primary-color);
             background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4688 4.34961C12.6699 4.34961 12.789 4.5837 12.6602 4.74414L12.6592 4.74316L6.9375 11.9961H6.93652C6.7256 12.2609 6.32265 12.2619 6.1123 11.9961L2.90234 7.92969C2.77666 7.77029 2.89024 7.5353 3.09375 7.53516H3.91309L4.03027 7.54883C4.06878 7.55769 4.10681 7.57051 4.14258 7.58789C4.21376 7.62255 4.2762 7.67315 4.3252 7.73535L6.52344 10.5215L11.2383 4.5498C11.3373 4.42341 11.4895 4.34973 11.6494 4.34961H12.4688Z' fill='white' stroke='white' stroke-width='0.3'/%3E%3C/svg%3E%0A");
-            border-color: var(--rich_green);
+            border-color: var(--primary-color);
         }
 
         &:not(:disabled) ~ .checkbox__icon {
@@ -21,21 +21,22 @@
         }
 
         &:disabled ~ .checkbox__icon {
+            border-color: var(--grey-color);
             user-select: none;
         }
 
         &:disabled ~ .checkbox__text {
-            //color: var(--border_grey);
+            color: var(--grey-color);
         }
 
         &:checked:disabled ~ .checkbox__icon {
-            background-color: var(--border_grey);
-            border-color: var(--border_grey);
+            background-color: var(--grey-color);
+            border-color: var(--grey-color);
         }
     }
 
     &__icon {
-        border: 1px solid var(--border_grey);
+        border: 1px solid var(--primary-color);
         border-radius: 4px;
         background-color: #fff;
         background-size: 16px 16px;
@@ -53,19 +54,9 @@
 }
 
 .radio {
-    align-items: flex-start;
-    color: var(--dark_grey);
+    align-items: center;
     display: flex;
     gap: 8px;
-    font-size: 14px;
-    line-height: 1.28571;
-
-    a {
-        color: var(--dark_grey);
-        @include hover {
-            color: var(--black);
-        }
-    }
 
     input {
         position: absolute;
@@ -75,7 +66,7 @@
         width: 1px;
 
         &:checked ~ .radio__icon {
-            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='black'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%231A212B'/%3E%3C/svg%3E%0A");
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke-width='2' stroke='%231E3E73'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%231E3E73'/%3E%3C/svg%3E%0A");
         }
 
         &:not(:disabled) ~ .radio__icon {
@@ -83,20 +74,16 @@
         }
 
         &:disabled ~ .radio__icon {
-            border-color: #C7CDD5;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke-width='2' stroke='%23C7CEDE'/%3E%3C/svg%3E");
             user-select: none;
         }
 
         &:disabled ~ .radio__text {
-            color: #C7CDD5;
-
-            a {
-                color: #C7CDD5;
-            }
+            color: var(--grey-color);
         }
 
         &:checked:disabled ~ .radio__icon {
-            background-color: #C7CDD5;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke-width='2' stroke='%23C7CEDE'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%23C7CEDE'/%3E%3C/svg%3E%0A");
         }
     }
 
@@ -104,12 +91,13 @@
         background-color: #fff;
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='black'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke-width='2' stroke='%231E3E73'/%3E%3C/svg%3E");
         background-position: 50% 50%;
+        border-radius: 50%;
         display: block;
-        height: 24px;
-        min-width: 24px;
-        width: 24px;
+        height: 16px;
+        min-width: 16px;
+        width: 16px;
     }
 
     &__text {

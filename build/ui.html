@@ -26,15 +26,79 @@
 </head>
 
 <body class="page">
+    <div class="top-bar">
+        <div class="top-bar__inner container">
+            <div class="top-bar__badges">
+                <div class="top-bar__badge top-bar__badge--red">−20% по программе лояльности ФНПР</div>
+    
+                <div class="top-bar__badge">Данные хранятся в России · 152-ФЗ</div>
+            </div>
+    
+            <ul class="top-bar__menu">
+                <li>
+                    <a href="#">Личный кабинет</a>
+                </li>
+                <li>
+                    <a href="#">Я агент</a>
+                </li>
+                <li>
+                    <a href="#">Объект</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
     <header class="header">
-        <div class="container"></div>
+        <div class="header__inner container">
+            <a class="header__logo" href="#">
+                <img class="header__logo-image" src="images/logo.png" alt="Профкурорт">
+                <span>
+                    <span class="header__logo-title">ПРОФКУРОРТ</span>
+                    <span class="header__logo-sub">Санаторно-курортное объединение ФНПР</span>
+                </span>
+            </a>
+    
+            <button class="header__menu-toggler button button--primary" type="button">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#menu-icon" />
+                </svg>
+                Меню
+            </button>
+    
+            <div class="header__contacts">
+                <div class="header__contacts-block">
+                    <p class="header__contacts-title">Звонок по России бесплатный</p>
+    
+                    <a class="header__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+    
+                    <p class="header__work-time">Пн-Пт с 09:00 до 18:00</p>
+                </div>
+    
+                <div class="header__contacts-block">
+                    <p class="header__contacts-title">Телефоны в Москве:</p>
+                    <a class="header__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+                    <a class="header__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                </div>
+            </div>
+    
+            <div class="header__actions">
+                <a class="button button--warning" href="#">Подобрать санаторий</a>
+    
+                <a href="#">Заказать звонок</a>
+            </div>
+        </div>
     </header>
 
     <div class="page__content">
         <div class="container">
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">Главная</a>
+                    <a class="breadcrumbs__link" href="#">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#home-icon" />
+                        </svg>
+                        Главная
+                    </a>
                 </li>
                 <li class="breadcrumbs__item">
                     <a class="breadcrumbs__link" href="#">Услуги и цены</a>
@@ -63,6 +127,56 @@
             <button class="button button--secondary" type="button" disabled>Кнопка</button>
 
             <a class="button button--secondary disabled">Ссылка</a>
+
+            <br> <br>
+
+            <button class="button button--success" type="button">Кнопка</button>
+
+            <a class="button button--success" href="#">Ссылка</a>
+
+            <button class="button button--success" type="button" disabled>Кнопка</button>
+
+            <a class="button button--success disabled">Ссылка</a>
+
+            <br> <br>
+
+            <button class="button button--warning" type="button">Кнопка</button>
+
+            <a class="button button--warning" href="#">Ссылка</a>
+
+            <button class="button button--warning" type="button" disabled>Кнопка</button>
+
+            <a class="button button--warning disabled">Ссылка</a>
+
+            <br> <br>
+
+            <button class="button button--danger" type="button">Кнопка</button>
+
+            <a class="button button--danger" href="#">Ссылка</a>
+
+            <button class="button button--danger" type="button" disabled>Кнопка</button>
+
+            <a class="button button--danger disabled">Ссылка</a>
+
+            <br> <br>
+
+            <button class="button button--outline" type="button">
+                Кнопка
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#arrow-right-icon" />
+                </svg>
+            </button>
+
+            <a class="button button--outline" href="#">
+                Ссылка
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#arrow-right-icon" />
+                </svg>
+            </a>
+
+            <button class="button button--outline" type="button" disabled>Кнопка</button>
+
+            <a class="button button--outline disabled">Ссылка</a>
 
             <br> <br>
 
@@ -100,10 +214,45 @@
 
             <br> <br>
 
+            <h2>Радио</h2>
+
+            <label class="radio">
+                <input type="radio" value="1" name="var">
+                <span class="radio__icon"></span>
+                <span class="radio__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br>
+
+            <label class="radio">
+                <input type="radio" value="2" name="var" checked>
+                <span class="radio__icon"></span>
+                <span class="radio__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br>
+
+            <label class="radio">
+                <input type="radio" value="3" name="var" disabled>
+                <span class="radio__icon"></span>
+                <span class="radio__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br>
+
+            <label class="radio">
+                <input type="radio" value="4" name="var_" disabled checked>
+                <span class="radio__icon"></span>
+                <span class="radio__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+            </label>
+
+            <br> <br>
+
             <h2>Поля ввода</h2>
 
             <div class="input-group">
-                <input class="input" type="text" name="" placeholder="Ваш email">
+                <label class="input-label" for="email">Email<span class="required">*</span></label>
+                <input class="input" id="email" type="text" name="" placeholder="Ваш email">
             </div>
 
             <br>
@@ -122,7 +271,6 @@
 
             <br>
 
-
             <div class="input-group">
                 <textarea class="textarea" placeholder="Ваш комментарий"></textarea>
             </div>
@@ -140,12 +288,206 @@
             <div class="input-group">
                 <textarea class="textarea" placeholder="Ваш комментарий" disabled></textarea>
             </div>
+
+            <br><br>
+
+            <h2>Селект</h2>
+
+            <label class="input-label">Выберите город</label>
+            <div class="select-wrapper">
+                <select class="select">
+                    <option>Москва</option>
+                    <option>Санкт-Петербург</option>
+                    <option>Екатеринбург</option>
+                    <option>Омск</option>
+                </select>
+            </div>
+
+            <br>
+
+            <label class="input-label">Выберите город</label>
+            <div class="select-wrapper">
+                <select class="select" disabled>
+                    <option>Москва</option>
+                    <option>Санкт-Петербург</option>
+                    <option>Екатеринбург</option>
+                    <option>Омск</option>
+                </select>
+            </div>
         </div>
+    </div>
     </div>
 
     <footer class="footer">
         <div class="container">
+            <div class="footer__inner">
+                <div class="footer__column">
+                    <p class="footer__title">Меню</p>
     
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Профсоюзам</a>
+                        </li>
+                        <li>
+                            <a href="#">Клиентам</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости и акции</a>
+                        </li>
+                        <li>
+                            <a href="#">Наши курорты</a>
+                        </li>
+                        <li>
+                            <a href="#">Лечение</a>
+                        </li>
+                        <li>
+                            <a href="#">Билеты</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Вопрос-ответ</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__column">
+                    <p class="footer__title">Офисы продаж</p>
+    
+                    <div class="footer__offices">
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Астрахани</a></p>
+                                <a class="footer-office__phone" href="tel:+78512547036">+7 (8512) 54-70-36</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Волгограде</a></p>
+                                <a class="footer-office__phone" href="tel:+78442383967">+7 (8442) 38-39-67</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Ростове-на-Дону</a></p>
+                                <a class="footer-office__phone" href="tel:+78632618624">+7 (863) 261-86-24</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Кисловодске</a></p>
+                                <a class="footer-office__phone" href="tel:+79383022599">+7 (938) 302-25-99</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Саранске</a></p>
+                                <a class="footer-office__phone" href="tel:+78342478676">+7 (8342) 47-86-76</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Москве</a></p>
+                                <a class="footer-office__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="footer__column">
+                    <p class="footer__title">Полезные ссылки</p>
+    
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Членам профсоюзов</a>
+                        </li>
+                        <li>
+                            <a href="#">Туристическим агентствам</a>
+                        </li>
+                        <li>
+                            <a href="#">Корпоративным клиентам</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__column">
+                    <p class="footer__title">Контакты</p>
+    
+                    <div class="footer__phones">
+                        <a class="footer__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+    
+                        <a class="footer__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+    
+                        <a class="footer__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+                    </div>
+    
+                    <p class="footer__text">117342, г.&nbsp;Москва, ул.&nbsp;Обручева, д.&nbsp;36, корп.&nbsp;2</p>
+    
+                    <p class="footer__title">Мы в соцсетях</p>
+    
+                    <div class="footer__socials">
+                        <a class="footer-social" href="#" target="_blank" title="Мы в MAX">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#max-icon" />
+                            </svg>
+                        </a>
+    
+                        <a class="footer-social" href="#" target="_blank" title="Мы Вконтакте">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#vk-icon" />
+                            </svg>
+                        </a>
+    
+                        <a class="footer-social" href="#" target="_blank" title="Мы в Telegram">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#tg-icon" />
+                            </svg>
+                        </a>
+                    </div>
+    
+                    <p class="footer__text">
+                        <b>Сведения о туроператоре</b><br>
+                        Наименование юридического лица: АО&nbsp;«СКО&nbsp;ФНПР «Профкурорт»<br>
+                        Реестровый номер: РТО&nbsp;022119
+                    </p>
+                </div>
+            </div>
+    
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Официальный сайт АО «СКО ФНПР «Профкурорт».</p>
+    
+                <p class="footer__developer">Разработка сайта - <a href="https://vsignal.ru/" target="_blank">Vsignal</a></p>
+            </div>
         </div>
     </footer>
 
