@@ -5,7 +5,7 @@
     cursor: pointer;
     display: inline-flex;
     font-family: var(--primary-font);
-    font-weight: 500;
+    font-weight: 400;
     gap: 8px;
     justify-content: center;
     line-height: 1.5;
@@ -18,6 +18,8 @@
     &.disabled,
     &:disabled,
     &[data-disabled] {
+        background-color: var(--grey-color);
+        color: var(--dark-grey-color);
         cursor: default;
         pointer-events: none;
     }
@@ -34,13 +36,6 @@
                 color: #fff;
             }
         }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--grey-color);
-            color: #fff;
-        }
     }
 
     &--secondary {
@@ -54,13 +49,6 @@
                 background-color: var(--secondary-color-hover);
                 color: #fff;
             }
-        }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--grey-color);
-            color: #fff;
         }
     }
 
@@ -76,13 +64,6 @@
                 color: #fff;
             }
         }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--grey-color);
-            color: #fff;
-        }
     }
 
     &--warning {
@@ -97,13 +78,6 @@
                 color: #fff;
             }
         }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--grey-color);
-            color: #fff;
-        }
     }
 
     &--danger {
@@ -117,13 +91,6 @@
                 background-color: #c35d5a;
                 color: #fff;
             }
-        }
-
-        &.disabled,
-        &:disabled,
-        &[data-disabled] {
-            background-color: var(--grey-color);
-            color: #fff;
         }
     }
 
@@ -144,8 +111,8 @@
         &.disabled,
         &:disabled,
         &[data-disabled] {
-            border-color: var(--grey-color);
-            color: var(--grey-color);
+            border-color: var(--dark-grey-color);
+            background-color: transparent;
         }
     }
 

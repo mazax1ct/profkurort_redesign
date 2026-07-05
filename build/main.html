@@ -22,6 +22,8 @@
     <link rel="preload" href="fonts/subset-Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css_plugins/jquery.fancybox.css" />
+    
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -84,9 +86,15 @@
             <div class="header__actions">
                 <a class="button button--warning" href="#">Подобрать санаторий</a>
     
-                <a href="#">Заказать звонок</a>
+                <a href="javascript:void(0)" data-fancybox="recall" data-src="#recall">Заказать звонок</a>
             </div>
         </div>
+    
+        <nav class="main-menu">
+            <div class="container">
+    
+            </div>
+        </nav>
     </header>
 
     <main class="page__content">
@@ -274,7 +282,69 @@
         </div>
     </footer>
 
+    <div id="recall" class="popup popup--recall">
+        <p class="popup__title">Обратный звонок</p>
+    
+        <p>Пожалуйста, укажите координаты для связи с Вами. В ближайшее время наш специалист свяжется с Вами.</p>
+    
+        <form class="recall-form" method="" action="">
+            <div class="radios">
+                <label class="input-label">Вы являетесь<span class="required">*</span></label>
+    
+                <label class="radio">
+                    <input id="tur_ag" type="radio" value="tur_ag" name="YOUARE">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">туристическим агентством</span>
+                </label>
+    
+                <label class="radio">
+                    <input id="prof_user" type="radio" value="prof_user" name="YOUARE">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">членом профсоюза</span>
+                </label>
+    
+                <label class="radio">
+                    <input id="priv_user" type="radio" value="priv_user" name="YOUARE">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">частным клиентом</span>
+                </label>
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="fio">Ваши фамилия, имя и отчество<span class="required">*</span></label>
+                <input class="input" id="fio" type="text" name="FIO" placeholder="Ваши фамилия, имя и отчество">
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="phone">Контактный телефон<span class="required">*</span></label>
+                <input class="input" id="phone" type="text" name="PHONE" placeholder="Контактный телефон">
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="email">Адрес электронный почты</label>
+                <input class="input" id="email" type="text" name="EMAIL" placeholder="Адрес электронный почты">
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="info">Дополнительная информация</label>
+                <textarea class="textarea" id="info" name="INFO" placeholder="Дополнительная информация"></textarea>
+            </div>
+    
+            <label class="checkbox">
+                <input type="checkbox" value="Y" name="AGREE">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Согласен на обработку <a href="/policy/" target="_blank">персональных данных</a></span>
+            </label>
+    
+            <button class="button button--success button--wide" type="submit">Отправить</button>
+        </form>
+    </div>
+
     <script src="js/jquery-3.7.1.min.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    
+    <script src="js/fancybox-defaults.js"></script>
     
     <script src="js/main.js"></script>
 </body>
