@@ -11,10 +11,10 @@
                 <a href="#">Личный кабинет</a>
             </li>
             <li>
-                <a href="#">Я агент</a>
+                <a href="#">Агентам</a>
             </li>
             <li>
-                <a href="#">Объект</a>
+                <a href="#">Объектам</a>
             </li>
         </ul>
     </div>
@@ -30,7 +30,7 @@
             </span>
         </a>
 
-        <button class="header__menu-toggler button button--primary" type="button">
+        <button class="js-menu-toggler header__menu-toggler button button--primary" type="button">
             <svg aria-hidden="true">
                 <use xlink:href="images/sprite.svg#menu-icon" />
             </svg>
@@ -62,7 +62,146 @@
 
     <nav class="main-menu">
         <div class="container">
+            <ul class="main-menu__list">
+                <li class="main-menu__root-item">
+                    <div class="main-menu__root-container">
+                        <a class="main-menu__root-link" href="/unions/">Профсоюзам</a>
 
+                        <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#plus-icon" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__sublist">
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/cooperation/">Сотрудничество с Профкурортом</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/documents-for-work/">Документы для работы</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link is-active" href="/unions/loyalty-program-for-trade-union-members/">Программа лояльности</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/where-buy/">Способы оплаты без комиссии</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/agents/">Обособленные региональные подразделения</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/conferenc/">Конференц-сервис для профсоюзов</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/documents-for-arrival/">Документы для заезда в санаторий</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/tarifs/">Цены на профсоюзные путевки</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/faq/">Вопрос-ответ</a></li>
+                    </ul>
+                </li>
+
+                <li class="main-menu__root-item">
+                    <div class="main-menu__root-container">
+                        <a class="main-menu__root-link" href="/for_clients/">Клиентам</a>
+
+                        <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#plus-icon" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__sublist">
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/types/">Отдых на любой вкус</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/where_to_buy/">Способы оплаты</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/">Членам профсоюзов</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/agencies/">Туристическим компаниям</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/corporate/">Корпоративным клиентам</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/reviews/">Контроль качества обслуживания</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/for_objects/">Объектам размещения</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/glossary/">Словарь терминов</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/feedback/">Обратная связь</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/poliklinika-fnpr/">Поликлиника ФНПР</a></li>
+                    </ul>
+                </li>
+
+                <li class="main-menu__root-item"><a class="main-menu__root-link" href="/news/">НОВОСТИ И АКЦИИ</a></li>
+
+                <li class="main-menu__root-item"><a class="main-menu__root-link" href="/geo/">Наши курорты</a></li>
+
+                <li class="main-menu__root-item">
+                    <div class="main-menu__root-container">
+                        <a class="main-menu__root-link" href="/medical/">Лечение</a>
+
+                        <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#plus-icon" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__sublist">
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/medical/programs/">Программы лечения</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/medical/advices/">Советы специалистов</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/medical/prirodnye-faktory/">Природные факторы</a></li>
+                    </ul>
+                </li>
+
+                <li class="main-menu__root-item">
+                    <div class="main-menu__root-container">
+                        <a class="main-menu__root-link" href="/tickets/">Билеты</a>
+
+                        <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#plus-icon" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__sublist">
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/tickets/train/">Ж/Д билеты</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/tickets/avia/">Авиабилеты</a></li>
+                    </ul>
+                </li>
+
+                <li class="main-menu__root-item">
+                    <div class="main-menu__root-container">
+                        <a class="main-menu__root-link" href="/company/">О нас</a>
+
+                        <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#plus-icon" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="main-menu__sublist">
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/sotrudnichestvo/">Сотрудничество</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/training/">Обучение и аттестация медицинских работников</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/management/">Руководство</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/reklama-i-pr">Реклама и PR</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/awards/">Наши награды</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/contacts/">Контакты</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/opportunities/">Вакансии</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/partners/">Партнеры</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/ob-aktsionernom-obshchestve/">Об Акционерном Обществе</a></li>
+                        <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/yubiley-kompanii/">Юбилей - нам 30 лет</a></li>
+                    </ul>
+                </li>
+
+                <li class="main-menu__root-item"><a class="main-menu__root-link" href="/faq/">Вопрос-ответ</a></li>
+            </ul>
+
+            <ul class="main-menu__service-list">
+                <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=client">МОИ ЗАКАЗЫ</a></li>
+                <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=agent">АГЕНТАМ</a></li>
+                <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=object">ОБЪЕКТАМ</a></li>
+                <li class="main-menu__service-item"><a class="main-menu__service-link" href="javascript:void(0)" data-fancybox="recall_mobile" data-src="#recall">ЗАКАЖИТЕ ЗВОНОК</a></li>
+                <li class="main-menu__service-item"><a class="main-menu__service-link" href="/feedback/">НАПИШИТЕ НАМ</a></li>
+            </ul>
+
+            <div class="header__contacts">
+                <div class="header__contacts-block">
+                    <p class="header__contacts-title">Звонок по России бесплатный</p>
+
+                    <a class="header__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+
+                    <p class="header__work-time">Пн-Пт с 09:00 до 18:00</p>
+                </div>
+
+                <div class="header__contacts-block">
+                    <p class="header__contacts-title">Телефоны в Москве:</p>
+                    <a class="header__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+                    <a class="header__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                </div>
+            </div>
         </div>
     </nav>
 </header>

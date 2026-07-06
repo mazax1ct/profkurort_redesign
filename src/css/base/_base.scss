@@ -36,15 +36,56 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
-    &.is-overflow {
-        overflow: hidden;
-        scrollbar-gutter: stable;
+    &.is-overflow {}
+
+    &.main-menu-open {
+        @media(max-width: $md - 0.02px) {
+            overflow: hidden;
+            scrollbar-gutter: stable;
+        }
+    }
+
+    &--no-padding {
+        .page__content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
     &__content {
         flex: 1 0 auto;
-        padding-top: 16px;
+        padding-top: 24px;
         padding-bottom: 48px;
+    }
+
+    &__section {
+        padding-top: clamp(32px, calc(0.9091rem + 5.4545vw), 80px);
+        padding-bottom: clamp(32px, calc(0.9091rem + 5.4545vw), 80px);
+    }
+
+    &__columns {
+        @media(min-width: $md) {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 24px;
+        }
+    }
+
+    &__sidebar {
+        min-height: 320px;
+        width: 320px;
+        @media(max-width: $md - 0.02px) {
+            display: none;
+        }
+    }
+
+    &__inner-content {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 24px clamp(16px, calc(0.8182rem + 0.9091vw), 24px);
+        @media(min-width: $md) {
+            width: calc(100% - 24px - 320px);
+        }
     }
 }
 
@@ -65,21 +106,142 @@ html {
     }
 }
 
+.bg-beige {
+    background-color: var(--beige-color);
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.lead {
+    &:not(:last-child) {
+        margin-bottom: clamp(1.5rem, calc(1.1364rem + 1.8182vw), 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, calc(1.1364rem + 1.8182vw), 2.5rem);
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    &__text-block {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @media(min-width: $sm) {
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        font-size: clamp(1rem, calc(0.9545rem + 0.2273vw), 1.125rem);
+        @media(min-width: $sm) {
+            width: calc(60% - 8px);
+        }
+    }
+}
+
+.pre-title {
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    gap: 8px;
+    text-transform: uppercase;
+
+    &::before {
+        display: block;
+        content: '';
+        height: 2px;
+        min-width: 24px;
+        width: 24px;
+    }
+
+    &--success {
+        color: var(--success-color);
+
+        &::before {
+            background-color: var(--success-color);
+        }
+    }
+
+    &--danger {
+        color: var(--danger-color);
+
+        &::before {
+            background-color: var(--danger-color);
+        }
+    }
+}
+
+.more-link {
+    @include active-area;
+    align-items: center;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 8px;
+    text-decoration: none;
+    @include hover {
+        svg {
+            transform: translateX(50%);
+        }
+    }
+
+    svg {
+        fill: currentColor;
+        height: 16px;
+        transition: transform 0.3s;
+        width: 16px;
+    }
+}
+
+.left-menu {
+    background-color: #fff;
+    border-radius: 12px;
+    font-size: 14px;
+    padding: 24px clamp(16px, calc(0.8182rem + 0.9091vw), 24px);
+
+    &__list {
+        @include list-reset;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__link {
+        @include active-area;
+        text-decoration: none;
+
+        &.is-active {
+            font-weight: 600;
+        }
+    }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .h1,
 h1 {
-    font-size: clamp(calc(var(--base-font-size) * 1.5), calc(0.9286rem + 2.8571vw), calc(var(--base-font-size) * 3));
-    font-weight: 700;
+    font-size: clamp(calc(var(--base-font-size) * 1.5), calc(1.3182rem + 0.9091vw), calc(var(--base-font-size) * 2));
+    font-weight: 600;
     line-height: 1.15;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    margin-top: 0.55em;
 
     &:last-child {
         margin-bottom: 0;
@@ -88,14 +250,11 @@ h1 {
 
 .h2,
 h2 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: clamp(calc(var(--base-font-size) * 1.25), calc(0.9773rem + 1.3636vw), calc(var(--base-font-size) * 1.5));
+    font-weight: 600;
     line-height: 1.15;
-    margin-bottom: 16px;
-
-    &:not(:first-child) {
-        margin-top: 16px;
-    }
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
 
     &:last-child {
         margin-bottom: 0;
@@ -104,12 +263,10 @@ h2 {
 
 .h3,
 h3 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    @media(min-width: $hd) {
-        font-size: 18px;
-    }
+    font-size: clamp(var(--base-font-size), calc(0.9545rem + 0.2273vw), calc(var(--base-font-size) * 1.125));
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    margin-top: 0.25em;
 
     &:last-child {
         margin-bottom: 0;
@@ -122,6 +279,10 @@ a {
     @include hover {
         color: var(--secondary-color);
     }
+}
+
+b {
+    font-weight: 600;
 }
 
 img {
@@ -150,7 +311,7 @@ ol,
 p,
 ul {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 1em;
 
     &:last-child {
         margin-bottom: 0;

@@ -2,7 +2,7 @@
     @include list-reset;
     color: var(--dark-grey-color);
     display: flex;
-    font-size: 12px;
+    font-size: clamp(calc(var(--base-font-size) * 0.75), calc(0.7045rem + 0.2273vw), calc(var(--base-font-size) * 0.875));
     gap: 8px;
     line-height: 1.2;
     margin-left: calc(0.01px - var(--container-padding));
@@ -11,9 +11,6 @@
     padding: 0 var(--container-padding);
     scrollbar-width: none;
     white-space: nowrap;
-    @media(min-width: $sm) {
-        font-size: 14px;
-    }
 
     &__item {
         &:not(:last-child) {
