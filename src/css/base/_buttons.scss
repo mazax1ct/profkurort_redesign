@@ -19,7 +19,7 @@
     &:disabled,
     &[data-disabled] {
         background-color: var(--grey-color);
-        color: var(--dark-grey-color);
+        color: var(--grey-color-dark);
         cursor: default;
         pointer-events: none;
     }
@@ -116,7 +116,7 @@
         &.disabled,
         &:disabled,
         &[data-disabled] {
-            border-color: var(--dark-grey-color);
+            border-color: var(--grey-color-dark);
             background-color: transparent;
         }
     }

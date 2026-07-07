@@ -1,0 +1,118 @@
+.geo-card {
+    border-radius: 16px;
+    background: linear-gradient(180deg, var(--secondary-color), var(--primary-color-hover));
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @include hover {
+        img {
+            transform: scale(1.02);
+        }
+    }
+
+    &::before {
+        background: linear-gradient(180deg, rgba(#000, 0.05), rgba(#000, 0.5));
+        content: '';
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    img {
+        height: 100%;
+        left: 0;
+        object-position: center;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        transform: scale(1);
+        transition: transform 0.3s;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        min-height: 240px;
+        padding: clamp(16px, 1.5vw, 20px);
+        position: relative;
+        z-index: 1;
+    }
+
+    &__top-block {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__title {
+        font-size: clamp(1.125rem, calc(0.9886rem + 0.6818vw), 1.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        margin-top: auto;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            @include hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__sections {
+        font-size: 14px;
+
+        a {
+            color: var(--grey-color);
+            text-decoration: none;
+            @include hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__price {
+        b {
+            font-weight: 700;
+            white-space: nowrap;
+        }
+    }
+}
+
+.grid--4 {
+    .geo-card {
+        &:not(.geo-card--big) {
+            grid-column: span 4;
+            @media(min-width: $sm) {
+                grid-column: span 2;
+            }
+            @media(min-width: $md) {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    .geo-card--big {
+        grid-column: span 4;
+        @media(min-width: $sm) {
+            grid-column: span 2;
+        }
+    }
+}

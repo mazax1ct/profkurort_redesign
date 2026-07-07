@@ -1,6 +1,6 @@
 .breadcrumbs {
     @include list-reset;
-    color: var(--dark-grey-color);
+    color: var(--grey-color-dark);
     display: flex;
     font-size: clamp(calc(var(--base-font-size) * 0.75), calc(0.7045rem + 0.2273vw), calc(var(--base-font-size) * 0.875));
     gap: 8px;

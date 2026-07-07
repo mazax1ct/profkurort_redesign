@@ -42,7 +42,7 @@
         }
 
         &:disabled ~ .checkbox__text {
-            color: var(--dark-grey-color);
+            color: var(--grey-color-dark);
         }
 
         &:checked:disabled ~ .checkbox__icon {
@@ -109,7 +109,7 @@
         }
 
         &:disabled ~ .radio__text {
-            color: var(--dark-grey-color);
+            color: var(--grey-color-dark);
         }
 
         &:checked:disabled ~ .radio__icon {

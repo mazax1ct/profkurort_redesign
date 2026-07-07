@@ -1,0 +1,77 @@
+.action-card {
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: clamp(16px, 1.5vw, 20px);
+    position: relative;
+    transition: transform 0.3s;
+    transform: translateY(0);
+    z-index: 1;
+
+    &--success {
+        background-color: var(--success-color-light);
+        border-color: var(--success-color);
+
+        .action-card__percent {
+            color: var(--success-color-dark);
+        }
+    }
+
+    &--warning {
+        background-color: var(--warning-color-light);
+        border-color: var(--warning-color);
+
+        .action-card__percent {
+            color: var(--warning-color-dark);
+        }
+    }
+
+    &__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    &__percent {
+        font-size: clamp(2rem, calc(1.6364rem + 1.8182vw), 3rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 8px;
+    }
+
+    &__lead {
+        color: var(--grey-color-dark);
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__title {
+        font-size: clamp(1.5rem, calc(0.9091rem + 0.4545vw), 1.25rem);
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        color: var(--grey-color-dark);
+        font-size: 14px;
+        max-width: 38ch;
+    }
+
+    .more-link {
+        font-size: 14px;
+        margin-top: auto;
+    }
+}
+
+.grid--4 {
+    .action-card {
+        grid-column: span 4;
+        @media(min-width: $sm) {
+            grid-column: span 2;
+        }
+    }
+}
