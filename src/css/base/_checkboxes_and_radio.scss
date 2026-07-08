@@ -1,7 +1,7 @@
 .checkbox {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
 
     &.error {
         color: var(--danger-color);
@@ -53,15 +53,16 @@
 
     &__icon {
         border: 1px solid var(--primary-color);
-        border-radius: 4px;
+        border-radius: 0.25rem;
         background-color: #fff;
-        background-size: 16px 16px;
+        background-size: 1rem 1rem;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         display: block;
-        height: 16px;
-        min-width: 16px;
-        width: 16px;
+        height: 1rem;
+        margin-top: 0.25rem;
+        min-width: 1rem;
+        width: 1rem;
     }
 
     &__text {
@@ -72,7 +73,7 @@
 .radio {
     align-items: center;
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
 
     &.error {
         color: var(--danger-color);
@@ -125,9 +126,9 @@
         background-position: 50% 50%;
         border-radius: 50%;
         display: block;
-        height: 16px;
-        min-width: 16px;
-        width: 16px;
+        height: 1rem;
+        min-width: 1rem;
+        width: 1rem;
     }
 
     &__text {

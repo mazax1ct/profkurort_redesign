@@ -1,0 +1,44 @@
+.press-card {
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 1px solid var(--beige-color-dark);
+    color: var(--grey-color-dark);
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1rem, calc(0.9091rem + 0.4545vw), 1.25rem);
+    transition: transform 0.3s;
+    transform: translateY(0);
+    z-index: 1;
+    @include hover {
+        transform: translateY(-0.25rem);
+    }
+
+    .icon {
+        margin-bottom: 1rem;
+    }
+
+    &__bottom-block {
+        border-top: 1px solid var(--beige-color-dark);
+        margin-top: auto;
+        padding-top: 0.875rem;
+    }
+
+    &__sub-title {
+        color: var(--primary-color);
+        font-size: 0.75rem;
+        font-weight: 600;
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.grid--3 {
+    .press-card {
+        grid-column: span 4;
+        @media(min-width: 580px) {
+            grid-column: span 1;
+        }
+    }
+}

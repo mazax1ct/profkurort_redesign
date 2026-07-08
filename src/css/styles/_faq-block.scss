@@ -1,6 +1,6 @@
 .faq-block {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
     flex-direction: column;
     @media(min-width: $md) {
         align-items: flex-start;
@@ -8,55 +8,33 @@
     }
 
     &__info {
-        border-radius: 16px;
+        border-radius: 1rem;
         background-color: var(--primary-color-hover);
         color: var(--grey-color);
-        padding: 48px 24px;
+        padding: clamp(1.5rem, calc(1.1364rem + 1.8182vw), 2.5rem);
         @media(min-width: $md) {
-            min-width: 480px;
-            width: 480px;
+            min-width: 30rem;
+            width: 30rem;
         }
 
         h3 {
             color: #fff;
+            font-size: clamp(1.5rem, calc(1.3182rem + 0.9091vw), 2rem);
+            line-height: 1.15;
+        }
+
+        .button {
+            margin-bottom: 1rem;
         }
     }
 
-    &__phone {
-        align-items: center;
-        display: flex;
-        gap: 8px;
-        font-size: 14px;
-        margin-top: 16px;
-
-        a {
-            color: #fff;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-    }
-
-    &__phone-icon {
-        align-items: center;
-        background-color: rgba(#fff, 0.1);
-        border-radius: 8px;
-        display: flex;
-        height: 40px;
-        justify-content: center;
-        min-width: 40px;
-        width: 40px;
-
-        svg {
-            fill: var(--danger-color-hover);
-            height: 24px;
-            width: 24px;
-        }
+    &__text {
+        max-width: 40ch;
     }
 
     .accordions {
         @media(min-width: $md) {
-            width: calc(100% - 480px - 24px);
+            width: calc(100% - 30rem - 1.5rem);
         }
     }
 }

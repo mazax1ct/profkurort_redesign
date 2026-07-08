@@ -13,11 +13,11 @@
 
     &__inner {
         display: flex;
-        gap: 24px;
+        gap: 1.5rem;
         flex-direction: column;
         flex-wrap: wrap;
-        padding-top: 56px;
-        padding-bottom: 40px;
+        padding-top: 3.5rem;
+        padding-bottom: 2.5rem;
         @media(min-width: $sm) {
             flex-direction: row;
         }
@@ -25,16 +25,16 @@
 
     &__column {
         @media(min-width: $sm) {
-            width: calc(100% / 2 - 24px / 2);
+            width: calc(100% / 2 - 1.5rem / 2);
         }
         @media(min-width: $md) {
-            width: calc(100% / 4 - 24px * 3 / 4);
+            width: calc(100% / 4 - 1.5rem * 3 / 4);
         }
     }
 
     &__title {
         color: #fff;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         text-transform: uppercase;
     }
@@ -44,7 +44,7 @@
 
         li {
             &:not(:last-child) {
-                margin-bottom: 8px;
+                margin-bottom: 0.5rem;
             }
         }
 
@@ -56,7 +56,7 @@
     &__offices {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 0.75rem;
     }
 
     &__phones {
@@ -64,8 +64,8 @@
         display: flex;
         font-weight: 700;
         flex-direction: column;
-        gap: 8px;
-        margin-bottom: 16px;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
 
         a {
             color: #fff;
@@ -73,26 +73,26 @@
     }
 
     &__text {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     &__socials {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
-        margin-bottom: 16px;
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 
     &__bottom {
         align-items: center;
-        border-top: 2px solid var(--grey-color);
+        border-top: 1px solid var(--grey-color);
         display: flex;
         flex-wrap: wrap;
-        font-size: 14px;
-        gap: 16px;
+        font-size: 0.875rem;
+        gap: 1rem;
         justify-content: space-between;
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
 
         p {
             margin: 0;
@@ -103,14 +103,14 @@
 .footer-office {
     align-items: center;
     display: flex;
-    gap: 8px;
-    font-size: 14px;
+    gap: 0.5rem;
+    font-size: 0.875rem;
 
     svg {
         fill: var(--grey-color);
-        height: 32px;
-        min-width: 32px;
-        width: 32px;
+        height: 2rem;
+        min-width: 2rem;
+        width: 2rem;
     }
 
     &__title {
@@ -125,18 +125,18 @@
     background-color: var(--grey-color);
     border-radius: 50%;
     display: flex;
-    height: 40px;
+    height: 2.5rem;
     justify-content: center;
-    min-width: 40px;
+    min-width: 2.5rem;
     transition: background-color 0.3s;
-    width: 40px;
+    width: 2.5rem;
     @include hover {
         background-color: #fff;
     }
 
     svg {
         fill: var(--primary-color);
-        height: 24px;
-        width: 24px;
+        height: 1.5rem;
+        width: 1.5rem;
     }
 }

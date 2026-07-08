@@ -1,16 +1,16 @@
 .button {
     align-items: center;
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
     display: inline-flex;
     font-family: var(--primary-font);
     font-weight: 400;
-    gap: 8px;
+    gap: 0.5rem;
     justify-content: center;
     line-height: 1.5;
-    height: 40px;
-    padding: 4px 16px;
+    height: 2.5rem;
+    padding: 0.25rem 1rem;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s;
@@ -127,8 +127,8 @@
 
     svg {
         fill: currentColor;
-        height: 16px;
-        min-width: 16px;
-        width: 16px;
+        height: 1rem;
+        min-width: 1rem;
+        width: 1rem;
     }
 }

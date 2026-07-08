@@ -1,9 +1,7 @@
-$xs: 480px;
-$sm: 768px;
-$md: 1024px;
-$hd: 1200px;
-$lg: 1400px;
-$fhd: 1900px;
+$xs: 30rem;
+$sm: 48rem;
+$md: 64rem;
+$hd: 75rem;
 
 :root {
     --primary-color: #1E3E73;
@@ -25,8 +23,8 @@ $fhd: 1900px;
     --grey-color: #C7CEDE;
     --grey-color-dark: #6B7686;
     --base-font-size: 16px;
-    --container-padding: 16px;
-    --header-min-height: 80px;
-    --container-max-width: 1192px;
+    --container-padding: 1rem;
+    --header-min-height: 5rem;
+    --container-max-width: 74.5rem;
     --primary-font: 'Montserrat', Arial, sans-serif;
 }

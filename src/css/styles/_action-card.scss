@@ -1,11 +1,12 @@
 .action-card {
-    border-radius: 16px;
+    align-items: flex-start;
+    border-radius: 1rem;
     background-color: #fff;
     border: 1px solid;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding: clamp(16px, 1.5vw, 20px);
+    padding: clamp(1rem, calc(0.9091rem + 0.4545vw), 1.25rem);
     position: relative;
     transition: transform 0.3s;
     transform: translateY(0);
@@ -32,37 +33,38 @@
     &__badges {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 16px;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     &__percent {
         font-size: clamp(2rem, calc(1.6364rem + 1.8182vw), 3rem);
         font-weight: 700;
         line-height: 1.15;
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
     }
 
     &__lead {
         color: var(--grey-color-dark);
         font-weight: 500;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     &__title {
         font-size: clamp(1.5rem, calc(0.9091rem + 0.4545vw), 1.25rem);
         font-weight: 700;
-        margin-bottom: 12px;
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
     }
 
     &__text {
         color: var(--grey-color-dark);
-        font-size: 14px;
+        font-size: 0.875rem;
         max-width: 38ch;
     }
 
     .more-link {
-        font-size: 14px;
+        font-size: 0.875rem;
         margin-top: auto;
     }
 }

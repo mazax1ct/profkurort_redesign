@@ -1,0 +1,38 @@
+.contact-phone {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+
+        &.big {
+            font-size: clamp(1rem, calc(0.8182rem + 0.9091vw), 1.5rem);
+            line-height: 1;
+        }
+    }
+
+    p {
+        color: var(--grey-color);
+        font-size: 0.875rem;
+    }
+
+    &__icon {
+        align-items: center;
+        background-color: rgba(#fff, 0.1);
+        border-radius: 0.5rem;
+        display: flex;
+        height: 2.5rem;
+        justify-content: center;
+        min-width: 2.5rem;
+        width: 2.5rem;
+
+        svg {
+            fill: var(--danger-color-hover);
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+}

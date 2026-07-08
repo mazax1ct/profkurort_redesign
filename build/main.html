@@ -22,6 +22,8 @@
     <link rel="preload" href="fonts/subset-Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css_plugins/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="css_plugins/jquery.fancybox.css" />
     
     <link rel="stylesheet" href="css/style.css" />
@@ -60,11 +62,11 @@
                 </span>
             </a>
     
-            <button class="js-menu-toggler header__menu-toggler button button--primary" type="button">
+            <button class="js-menu-toggler header__menu-toggler button button--primary" type="button" title="Меню">
                 <svg aria-hidden="true">
                     <use xlink:href="images/sprite.svg#menu-icon" />
                 </svg>
-                Меню
+                <span>Меню</span>
             </button>
     
             <div class="header__contacts">
@@ -238,9 +240,89 @@
 
     <main class="page__content">
         <div class="container">
-            <section class="page__section">
-                <h1>Hero</h1>
-            </section>
+            <div class="js-main-slider main-slider swiper full-width">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="main-slider__image">
+                            <img src="images/content/main-slider/img.jpg" alt="">
+                        </div>
+
+                        <div class="main-slider__slide container">
+                            <p class="main-slider__title main-slider__title--big">Санаторно-курортное лечение по всей России</p>
+
+                            <div class="main-slider__text">
+                                <p>374 здравницы в 65 регионах — от целебных источников Кавминвод до морского побережья Крыма и хвойного воздуха Белокурихи</p>
+                            </div>
+
+                            <ul class="main-slider__features">
+                                <li>
+                                    <span class="icon icon--danger icon--small">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#trophy-icon" />
+                                        </svg>
+                                    </span>
+                                    Лауреат премии Правительства РФ в области качества 2022
+                                </li>
+                                <li>
+                                    <span class="icon icon--warning icon--small">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#award-icon" />
+                                        </svg>
+                                    </span>
+                                    Особенно Хорошее место 2026
+                                </li>
+                                <li>
+                                    <span class="icon icon--success icon--small">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#star-icon" />
+                                        </svg>
+                                    </span>
+                                    9,9/10 оценка гостей
+                                </li>
+                                <li>
+                                    <span class="icon icon--secondary icon--small">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#shield-icon" />
+                                        </svg>
+                                    </span>
+                                    Под эгидой ФНПР
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="main-slider__slide container">
+                            <p class="pre-title pre-title--danger">Акция</p>
+
+                            <p class="main-slider__title">"Ребенок на доп.месте бесплатно" в&nbsp;санатории "Металлург" (г. Сочи, Краснодарский кр.)</p>
+
+                            <div class="main-slider__text">
+                                <a class="more-link" href="#">
+                                    Подбронее
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#arrow-right-alt-icon" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-slider__nav container">
+                    <button class="js-main-slider-prev main-slider__prev" type="button" title="Назад">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron-left-icon" />
+                        </svg>
+                    </button>
+
+                    <button class="js-main-slider-next main-slider__next" type="button" title="Вперёд">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#chevron-right-icon" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
             <section class="page__section bg-white full-width">
                 <div class="container">
@@ -420,7 +502,7 @@
 
                 <div class="grid grid--4">
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--success">
+                        <div class="icon icon--success">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -434,7 +516,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--danger">
+                        <div class="icon icon--danger">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -448,7 +530,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--warning">
+                        <div class="icon icon--warning">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -462,7 +544,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--primary">
+                        <div class="icon icon--primary">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -476,7 +558,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--secondary">
+                        <div class="icon icon--secondary">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -490,7 +572,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--beige">
+                        <div class="icon icon--beige">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -504,7 +586,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--secondary">
+                        <div class="icon icon--secondary">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -518,7 +600,7 @@
                     </div>
 
                     <div class="med-card">
-                        <div class="med-card__icon med-card__icon--warning">
+                        <div class="icon icon--warning">
                             <svg aria-hidden="true">
                                 <use xlink:href="images/sprite.svg#image-icon" />
                             </svg>
@@ -897,10 +979,51 @@
 
             <section class="page__section bg-white full-width">
                 <div class="container">
-                    <div class="lead">
-                        <p class="pre-title pre-title--success"> Бесплатная консультация</p>
+                    <div class="hero-form">
+                        <div class="hero-form__text-block">
+                            <p class="pre-title pre-title--success"> Бесплатная консультация</p>
+                            <h2>Готовы поехать на&nbsp;лечение?</h2>
 
-                        <h2>Готовы поехать на лечение?</h2>
+                            <p class="hero-form__text">Подберём санаторий под ваш диагноз, регион и&nbsp;бюджет за пару минут — без обязательств. Или&nbsp;перезвоним сами, когда вам удобно.</p>
+
+                            <div class="contact-phone">
+                                <span class="contact-phone__icon">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#phone-icon" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <a class="big" href="tel:88005550404">8 800 555-04-04</a>
+                                    <p>Бесплатно по России · ежедневно&nbsp;8:00‑22:00</p>
+                                </div>
+                            </div>
+
+                            <a class="button button--warning" href="#">Подобрать санаторий</a>
+                        </div>
+
+                        <div class="hero-form__form-block">
+                            <h3>Мы перезвоним в&nbsp;течение&nbsp;15&nbsp;минут</h3>
+
+                            <form action="">
+                                <div class="input-group">
+                                    <label class="input-label" for="name">Как вас зовут<span class="required">*</span></label>
+                                    <input class="input" id="name" type="text" name="name" placeholder="Например, Ирина">
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="input-label" for="phone">Телефон<span class="required">*</span></label>
+                                    <input class="input" id="phone" type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                                </div>
+
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Нажимая на кнопку “Отправить”, я даю согласие на <a href="#">обработку персональных данных</a></span>
+                                </label>
+
+                                <button class="button button--success" type="submit">Отправить</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -909,7 +1032,7 @@
                 <div class="lead">
                     <p class="pre-title pre-title--danger">Отзывы</p>
 
-                    <h2>Нас рекомендуют 9 из 10 гостей</h2>
+                    <h2>Нас рекомендуют 9&nbsp;из&nbsp;10&nbsp;гостей</h2>
 
                     <div class="lead__text-block">
                         <div class="lead__text">
@@ -921,7 +1044,7 @@
 
             <section class="page__section  bg-white full-width">
                 <div class="container">
-                    <div class="lead">
+                    <div class="lead lead--centered">
                         <p class="pre-title pre-title--danger">Признание</p>
 
                         <h2>О Профкурорте пишут</h2>
@@ -929,6 +1052,53 @@
                         <div class="lead__text-block">
                             <div class="lead__text">
                                 <p>Федерального туроператора санаторного отдыха ФНПР цитируют деловые и федеральные издания — о масштабе сети, ценах и доступности лечения.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid--3">
+                        <div class="press-card">
+                            <div class="icon icon--beige">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#news-icon" />
+                                </svg>
+                            </div>
+
+                            <p>Один из крупнейших операторов санаториев Кавказских Минеральных Вод — ведущего бальнеологического региона страны.</p>
+
+                            <div class="press-card__bottom-block">
+                                <p class="press-card__sub-title">Деловое издание о туризме</p>
+                                <p class="badge badge--beige">рынок санаториев КМВ</p>
+                            </div>
+                        </div>
+
+                        <div class="press-card">
+                            <div class="icon icon--beige">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#news-icon" />
+                                </svg>
+                            </div>
+
+                            <p>Под эгидой ФНПР работают 374 здравницы в 65 регионах России и за рубежом — одна из крупнейших санаторных систем страны.</p>
+
+                            <div class="press-card__bottom-block">
+                                <p class="press-card__sub-title">Федеральное информагентство</p>
+                                <p class="badge badge--beige">санаторная сеть ФНПР</p>
+                            </div>
+                        </div>
+
+                        <div class="press-card">
+                            <div class="icon icon--beige">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#news-icon" />
+                                </svg>
+                            </div>
+
+                            <p>Членам профсоюзов лечение в санаториях системы обходится дешевле благодаря постоянной скидке по линии ФНПР.</p>
+
+                            <div class="press-card__bottom-block">
+                                <p class="press-card__sub-title">Общественно-политический еженедельник</p>
+                                <p class="badge badge--beige">доступность путёвок</p>
                             </div>
                         </div>
                     </div>
@@ -943,7 +1113,7 @@
 
                     <div class="lead__text-block">
                         <div class="lead__text">
-                            <p>Коротко о подборе, оплате, документах и безопасности данных. Если вопрос остался — мы рядом.</p>
+                            <p>Коротко о подборе, оплате, документах и безопасности данных. Если&nbsp;вопрос остался — мы рядом.</p>
                         </div>
                     </div>
                 </div>
@@ -951,7 +1121,7 @@
                 <div class="faq-block">
                     <div class="faq-block__info">
                         <h3>Не нашли ответ?</h3>
-                        <p>Наш AI-ассистент отвечает мгновенно и круглосуточно, а сложные вопросы передаст специалисту.</p>
+                        <p class="faq-block__text">Наш AI-ассистент отвечает мгновенно и круглосуточно, а сложные вопросы передаст специалисту.</p>
 
                         <a class="button button--warning" href="#">
                             <svg aria-hidden="true">
@@ -960,8 +1130,8 @@
                             Задать вопрос в чате
                         </a>
 
-                        <div class="faq-block__phone">
-                            <span class="faq-block__phone-icon">
+                        <div class="contact-phone">
+                            <span class="contact-phone__icon">
                                 <svg aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#phone-icon" />
                                 </svg>
@@ -974,7 +1144,7 @@
                     </div>
 
                     <div class="accordions">
-                        <details class="accordion">
+                        <details class="accordion" open>
                             <summary class="js-accordion-toggler accordion__title">
                                 Как работает AI-подбор санатория?
                                 <span class="accordion__icon">
@@ -1316,7 +1486,11 @@
     
     <script src="js/fancybox-defaults.js"></script>
     
+    <script src="js/swiper-bundle.min.js"></script>
+    
     <script src="js/main.js"></script>
+
+    <script src="js/main-slider.js"></script>
 </body>
 
 </html>

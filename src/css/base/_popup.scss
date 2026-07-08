@@ -4,18 +4,18 @@
 
 .popup {
     background-color: #fff;
-    border-radius: 16px;
+    border-radius: 1rem;
     display: none;
-    padding: 32px 24px;
+    padding: 2rem 1.5rem;
     overflow: visible;
 
     &--recall {
-        max-width: 480px;
+        max-width: 30rem;
     }
 
     &__title {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     &__closer {
@@ -24,13 +24,13 @@
         border-radius: 50%;
         border: 1px solid var(--grey-color);
         display: flex;
-        height: 40px;
+        height: 2.5rem;
         justify-content: center;
         opacity: 1;
         right: 0;
         top: 0;
         transform: translate(50%, -50%);
-        width: 40px;
+        width: 2.5rem;
     }
 }
 
@@ -38,6 +38,6 @@
     .checkbox,
     .input-group,
     .radios {
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
 }

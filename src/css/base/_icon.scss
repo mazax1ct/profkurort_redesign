@@ -1,0 +1,45 @@
+.icon {
+    align-items: center;
+    border-radius: 0.5rem;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    min-width: 2.5rem;
+    width: 3rem;
+
+    svg {
+        fill: #fff;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    &--small {
+        height: 2.5rem;
+        min-width: 2.5rem;
+        width: 2.5rem;
+    }
+
+    &--success {
+        background-color: var(--success-color);
+    }
+
+    &--danger {
+        background-color: var(--danger-color);
+    }
+
+    &--warning {
+        background-color: var(--warning-color);
+    }
+
+    &--primary {
+        background-color: var(--primary-color);
+    }
+
+    &--secondary {
+        background-color: var(--secondary-color);
+    }
+
+    &--beige {
+        background-color: var(--beige-color-dark);
+    }
+}

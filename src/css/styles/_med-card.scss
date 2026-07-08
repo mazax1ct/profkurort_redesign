@@ -1,58 +1,22 @@
 .med-card {
-    border-radius: 16px;
+    border-radius: 1rem;
     background-color: #fff;
     border: 1px solid var(--beige-color-dark);
     color: var(--grey-color-dark);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding: clamp(16px, 1.5vw, 20px);
+    padding: clamp(1rem, calc(0.9091rem + 0.4545vw), 1.25rem);
     position: relative;
     transition: transform 0.3s;
     transform: translateY(0);
     z-index: 1;
     @include hover {
-        transform: translateY(-4px);
+        transform: translateY(-0.25rem);
     }
 
-    &__icon {
-        align-items: center;
-        border-radius: 8px;
-        display: flex;
-        height: 48px;
-        justify-content: center;
-        margin-bottom: 16px;
-        width: 48px;
-
-        &--success {
-            background-color: var(--success-color);
-        }
-
-        &--danger {
-            background-color: var(--danger-color);
-        }
-
-        &--warning {
-            background-color: var(--warning-color);
-        }
-
-        &--primary {
-            background-color: var(--primary-color);
-        }
-
-        &--secondary {
-            background-color: var(--secondary-color);
-        }
-
-        &--beige {
-            background-color: var(--beige-color-dark);
-        }
-
-        svg {
-            fill: #fff;
-            height: 24px;
-            width: 24px;
-        }
+    .icon {
+        margin-bottom: 1rem;
     }
 
     &__title {
@@ -68,13 +32,13 @@
     }
 
     &__text {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     &__count {
         border-top: 1px solid var(--grey-color);
         margin-top: auto;
-        padding-top: 12px;
+        padding-top: 0.75rem;
 
         b {
             color: var(--danger-color);
