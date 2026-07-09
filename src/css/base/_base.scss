@@ -65,6 +65,14 @@ html {
     &__section {
         padding-top: clamp(2rem, calc(0.9091rem + 5.4545vw), 5rem);
         padding-bottom: clamp(2rem, calc(0.9091rem + 5.4545vw), 5rem);
+
+        &--no-padding-top {
+            padding-top: 0;
+        }
+
+        &--no-padding-bottom {
+            padding-bottom: 0;
+        }
     }
 
     &__columns {

@@ -40,15 +40,15 @@
 
                             <ul class="main-slider__features">
                                 <li>
-                                    <span class="icon icon--danger icon--small">
+                                    <span class="icon icon--secondary icon--small">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#trophy-icon" />
                                         </svg>
                                     </span>
-                                    Лауреат премии Правительства РФ в области качества 2022
+                                    Лауреат премии Правительства&nbsp;РФ в&nbsp;области качества&nbsp;2022
                                 </li>
                                 <li>
-                                    <span class="icon icon--warning icon--small">
+                                    <span class="icon icon--secondary icon--small">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#award-icon" />
                                         </svg>
@@ -56,7 +56,7 @@
                                     Особенно Хорошее место 2026
                                 </li>
                                 <li>
-                                    <span class="icon icon--success icon--small">
+                                    <span class="icon icon--secondary icon--small">
                                         <svg aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#star-icon" />
                                         </svg>
@@ -107,6 +107,39 @@
                     </button>
                 </div>
             </div>
+
+            <section class="page__section page__section--no-padding-bottom bg-white full-width">
+                <div class="container">
+                    <div class="search-form">
+                        <p class="search-form__title">Найдите санаторий для отдыха и здоровья</p>
+                        <p class="search-form__text">Проверенные санатории, курортные отели и пансионаты России. Лечебные программы, питание и море — в одном поиске.</p>
+
+                        <form class="search-form__inner" action="">
+                            <div class="search-form__region input-group">
+                                <label class="input-label" for="region">Поиск по запросу</label>
+                                <input class="input" id="region" type="text" name="" placeholder="Санаторий, регион, профиль лечения">
+                            </div>
+
+                            <div class="search-form__dates input-group">
+                                <label class="input-label" for="date">Даты заезда/выезда</label>
+                                <div class="search-form__dates-container">
+                                    <input class="input" id="date" type="text" name="date_in" placeholder="Дата заезда">
+                                    <input class="input" type="text" name="date_out" placeholder="Дата выезда">
+                                </div>
+                            </div>
+
+                            <div class="search-form__numbers input-group">
+                                <label class="input-label" for="numbers">Количество номеров</label>
+                                <input class="input" id="numbers" type="text" name="" placeholder="Количество номеров">
+                            </div>
+
+                            <button class="search-form__submit button button--primary" type="submit">Подобрать</button>
+                        </form>
+
+                        <button class="search-form__options" type="button">Дополнительные параметры</button>
+                    </div>
+                </div>
+            </section>
 
             <section class="page__section bg-white full-width">
                 <div class="container">

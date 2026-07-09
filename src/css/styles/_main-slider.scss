@@ -84,7 +84,7 @@
         justify-content: center;
         position: relative;
         padding-top: clamp(2rem, calc(0.9091rem + 5.4545vw), 5rem);
-        padding-bottom: clamp(2rem, calc(0.9091rem + 5.4545vw), 5rem);
+        padding-bottom: 5rem;
         width: 100%;
         z-index: 1;
         @media(min-width: $sm) {
