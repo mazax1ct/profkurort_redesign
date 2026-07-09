@@ -21,11 +21,9 @@ $(document).on('click', '.js-sublist-toggler', function () {
   const _this = $(this);
   if(!_this.hasClass('is-active')) {
     _this.closest('.main-menu__root-item').find('.main-menu__sublist').slideDown();
-    _this.find('use').attr('xlink:href', 'images/sprite.svg#minus-icon');
     _this.addClass('is-active');
   } else {
     _this.closest('.main-menu__root-item').find('.main-menu__sublist').slideUp();
-    _this.find('use').attr('xlink:href', 'images/sprite.svg#plus-icon');
     _this.removeClass('is-active');
   }
 

@@ -13,6 +13,11 @@
         color: var(--primary-color);
     }
 
+    &--outline-white {
+        border: 1px solid var(--grey-color);
+        color: #fff;
+    }
+
     &--primary {
         background-color: var(--primary-color-hover);
         color: #fff;
@@ -36,6 +41,7 @@
 
     &--beige {
         background-color: var(--beige-color);
+        color: var(--primary-color);
     }
 
     &__indicator {

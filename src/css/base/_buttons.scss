@@ -9,7 +9,7 @@
     gap: 0.5rem;
     justify-content: center;
     line-height: 1.5;
-    height: 2.5rem;
+    height: 3rem;
     padding: 0.25rem 1rem;
     text-decoration: none;
     text-align: center;
@@ -119,6 +119,10 @@
             border-color: var(--grey-color-dark);
             background-color: transparent;
         }
+    }
+
+    &--low {
+        height: 2.5rem;
     }
 
     &--wide {

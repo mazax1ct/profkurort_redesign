@@ -10,12 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Профкурорт" />
-    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
 
     <link rel="preload" href="fonts/subset-Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -33,9 +33,9 @@
     <div class="top-bar">
         <div class="top-bar__inner container">
             <div class="top-bar__badges">
-                <div class="top-bar__badge top-bar__badge--red">−20% по программе лояльности ФНПР</div>
+                <div class="badge badge--danger">−20% по программе лояльности ФНПР</div>
     
-                <div class="top-bar__badge">Данные хранятся в России · 152-ФЗ</div>
+                <div class="badge badge--outline-white">Данные хранятся в России · 152-ФЗ</div>
             </div>
     
             <ul class="top-bar__menu">
@@ -58,11 +58,11 @@
                 <img class="header__logo-image" src="images/logo.png" alt="Профкурорт">
                 <span>
                     <span class="header__logo-title">ПРОФКУРОРТ</span>
-                    <span class="header__logo-sub">Санаторно-курортное объединение ФНПР</span>
+                    <span class="header__logo-sub">Санаторно-курортное объединение&nbsp;ФНПР</span>
                 </span>
             </a>
     
-            <button class="js-menu-toggler header__menu-toggler button button--primary" type="button" title="Меню">
+            <button class="js-menu-toggler header__menu-toggler button button--primary button--low" type="button" title="Меню">
                 <svg aria-hidden="true">
                     <use xlink:href="images/sprite.svg#menu-icon" />
                 </svg>
@@ -86,7 +86,7 @@
             </div>
     
             <div class="header__actions">
-                <a class="button button--warning" href="#">Подобрать санаторий</a>
+                <a class="button button--warning button--low" href="#">Подобрать санаторий</a>
     
                 <a href="javascript:void(0)" data-fancybox="recall" data-src="#recall">Заказать звонок</a>
             </div>
@@ -94,6 +94,28 @@
     
         <nav class="main-menu">
             <div class="container">
+                <div class="header__actions">
+                    <a class="button button--warning button--low" href="#">Подобрать санаторий</a>
+    
+                    <a href="javascript:void(0)" data-fancybox="recall_mobile" data-src="#recall">Заказать звонок</a>
+                </div>
+    
+                <div class="header__contacts">
+                    <div class="header__contacts-block">
+                        <p class="header__contacts-title">Звонок по России бесплатный</p>
+    
+                        <a class="header__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+    
+                        <p class="header__work-time">Пн-Пт с 09:00 до 18:00</p>
+                    </div>
+    
+                    <div class="header__contacts-block">
+                        <p class="header__contacts-title">Телефоны в Москве:</p>
+                        <a class="header__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+                        <a class="header__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                    </div>
+                </div>
+    
                 <ul class="main-menu__list">
                     <li class="main-menu__root-item">
                         <div class="main-menu__root-container">
@@ -101,7 +123,7 @@
     
                             <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
                                 <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#plus-icon" />
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
                                 </svg>
                             </button>
                         </div>
@@ -125,7 +147,7 @@
     
                             <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
                                 <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#plus-icon" />
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
                                 </svg>
                             </button>
                         </div>
@@ -154,7 +176,7 @@
     
                             <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
                                 <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#plus-icon" />
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
                                 </svg>
                             </button>
                         </div>
@@ -172,7 +194,7 @@
     
                             <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
                                 <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#plus-icon" />
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
                                 </svg>
                             </button>
                         </div>
@@ -189,7 +211,7 @@
     
                             <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
                                 <svg aria-hidden="true">
-                                    <use xlink:href="images/sprite.svg#plus-icon" />
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
                                 </svg>
                             </button>
                         </div>
@@ -215,25 +237,8 @@
                     <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=client">МОИ ЗАКАЗЫ</a></li>
                     <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=agent">АГЕНТАМ</a></li>
                     <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=object">ОБЪЕКТАМ</a></li>
-                    <li class="main-menu__service-item"><a class="main-menu__service-link" href="javascript:void(0)" data-fancybox="recall_mobile" data-src="#recall">ЗАКАЖИТЕ ЗВОНОК</a></li>
                     <li class="main-menu__service-item"><a class="main-menu__service-link" href="/feedback/">НАПИШИТЕ НАМ</a></li>
                 </ul>
-    
-                <div class="header__contacts">
-                    <div class="header__contacts-block">
-                        <p class="header__contacts-title">Звонок по России бесплатный</p>
-    
-                        <a class="header__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
-    
-                        <p class="header__work-time">Пн-Пт с 09:00 до 18:00</p>
-                    </div>
-    
-                    <div class="header__contacts-block">
-                        <p class="header__contacts-title">Телефоны в Москве:</p>
-                        <a class="header__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
-                        <a class="header__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
@@ -1068,7 +1073,9 @@
 
                             <div class="press-card__bottom-block">
                                 <p class="press-card__sub-title">Деловое издание о туризме</p>
-                                <p class="badge badge--beige">рынок санаториев КМВ</p>
+                                <div class="press-card__badges">
+                                    <p class="badge badge--beige">рынок санаториев КМВ</p>
+                                </div>
                             </div>
                         </div>
 
@@ -1083,7 +1090,9 @@
 
                             <div class="press-card__bottom-block">
                                 <p class="press-card__sub-title">Федеральное информагентство</p>
-                                <p class="badge badge--beige">санаторная сеть ФНПР</p>
+                                <div class="press-card__badges">
+                                    <p class="badge badge--beige">санаторная сеть ФНПР</p>
+                                </div>
                             </div>
                         </div>
 
@@ -1098,7 +1107,9 @@
 
                             <div class="press-card__bottom-block">
                                 <p class="press-card__sub-title">Общественно-политический еженедельник</p>
-                                <p class="badge badge--beige">доступность путёвок</p>
+                                <div class="press-card__badges">
+                                    <p class="badge badge--beige">доступность путёвок</p>
+                                </div>
                             </div>
                         </div>
                     </div>
