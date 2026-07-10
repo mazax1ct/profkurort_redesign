@@ -40,7 +40,9 @@ html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 
-    &.is-overflow {}
+    &.is-overflow {
+        overflow: hidden;
+    }
 
     &.main-menu-open {
         @media(max-width: $md - 0.02rem) {
@@ -78,8 +80,13 @@ html {
     &__columns {
         @media(min-width: $md) {
             display: flex;
-            flex-direction: row-reverse;
             gap: 1.5rem;
+        }
+
+        &--reverse {
+            @media(min-width: $md) {
+                flex-direction: row-reverse;
+            }
         }
     }
 
@@ -92,9 +99,9 @@ html {
     }
 
     &__inner-content {
-        background-color: #fff;
+        /*background-color: #fff;
         border-radius: 0.75rem;
-        padding: 1.5rem clamp(1rem, calc(0.8182rem + 0.9091vw), 1.5rem);
+        padding: 1.5rem clamp(1rem, calc(0.8182rem + 0.9091vw), 1.5rem);*/
         @media(min-width: $md) {
             width: calc(100% - 1.5rem - 20rem);
         }

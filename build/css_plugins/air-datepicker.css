@@ -12,11 +12,11 @@
 
 .-selected-.air-datepicker-cell.-year-.-other-decade-, .-selected-.air-datepicker-cell.-day-.-other-month- {
   color: #fff;
-  background: var(--adp-background-color-selected-other-month)
+  background: var(--primary-color)
 }
 
 .-selected-.-focus-.air-datepicker-cell.-year-.-other-decade-, .-selected-.-focus-.air-datepicker-cell.-day-.-other-month- {
-  background: var(--adp-background-color-selected-other-month-focused)
+  background: var(--primary-color-hover)
 }
 
 .-in-range-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.air-datepicker-cell.-day-.-other-month- {

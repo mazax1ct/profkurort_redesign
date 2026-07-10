@@ -134,6 +134,10 @@
             &:not(:last-child) {
                 margin-bottom: 0.25rem;
             }
+
+            .checkbox__icon {
+                margin-top: 0.15em;
+            }
         }
     }
 

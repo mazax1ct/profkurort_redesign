@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Профкурорт</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Профкурорт" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+    <link rel="preload" href="fonts/subset-Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/subset-Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css_plugins/jquery.fancybox.css" />
+    
+    <link rel="stylesheet" href="css_plugins/air-datepicker.css" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page">
+    <div class="top-bar">
+        <div class="top-bar__inner container">
+            <div class="top-bar__badges">
+                <div class="badge badge--danger">−20% по программе лояльности ФНПР</div>
+    
+                <div class="badge badge--outline-white">Данные хранятся в России · 152-ФЗ</div>
+            </div>
+    
+            <ul class="top-bar__menu">
+                <li>
+                    <a href="#">Личный кабинет</a>
+                </li>
+                <li>
+                    <a href="#">Агентам</a>
+                </li>
+                <li>
+                    <a href="#">Объектам</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="header__inner container">
+            <a class="header__logo" href="#">
+                <img class="header__logo-image" src="images/logo.png" alt="Профкурорт">
+                <span>
+                    <span class="header__logo-title">ПРОФКУРОРТ</span>
+                    <span class="header__logo-sub">Санаторно-курортное объединение&nbsp;ФНПР</span>
+                </span>
+            </a>
+    
+            <button class="js-menu-toggler header__menu-toggler button button--primary button--low" type="button" title="Меню">
+                <svg aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#menu-icon" />
+                </svg>
+                <span>Меню</span>
+            </button>
+    
+            <div class="header__contacts">
+                <div class="header__contacts-block">
+                    <p class="header__contacts-title">Звонок по России бесплатный</p>
+    
+                    <a class="header__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+    
+                    <p class="header__work-time">Пн-Пт с 09:00 до 18:00</p>
+                </div>
+    
+                <div class="header__contacts-block">
+                    <p class="header__contacts-title">Телефоны в Москве:</p>
+                    <a class="header__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+                    <a class="header__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                </div>
+            </div>
+    
+            <div class="header__actions">
+                <a class="button button--warning button--low" href="#">Подобрать санаторий</a>
+    
+                <a href="javascript:void(0)" data-fancybox="recall" data-src="#recall">Заказать звонок</a>
+            </div>
+        </div>
+    
+        <nav class="main-menu">
+            <div class="container">
+                <div class="header__actions">
+                    <a class="button button--warning button--low" href="#">Подобрать санаторий</a>
+    
+                    <a href="javascript:void(0)" data-fancybox="recall_mobile" data-src="#recall">Заказать звонок</a>
+                </div>
+    
+                <div class="header__contacts">
+                    <div class="header__contacts-block">
+                        <p class="header__contacts-title">Звонок по России бесплатный</p>
+    
+                        <a class="header__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+    
+                        <p class="header__work-time">Пн-Пт с 09:00 до 18:00</p>
+                    </div>
+    
+                    <div class="header__contacts-block">
+                        <p class="header__contacts-title">Телефоны в Москве:</p>
+                        <a class="header__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+                        <a class="header__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                    </div>
+                </div>
+    
+                <ul class="main-menu__list">
+                    <li class="main-menu__root-item">
+                        <div class="main-menu__root-container">
+                            <a class="main-menu__root-link" href="/unions/">Профсоюзам</a>
+    
+                            <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__sublist">
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/cooperation/">Сотрудничество с Профкурортом</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/documents-for-work/">Документы для работы</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link is-active" href="/unions/loyalty-program-for-trade-union-members/">Программа лояльности</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/where-buy/">Способы оплаты без комиссии</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/agents/">Обособленные региональные подразделения</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/conferenc/">Конференц-сервис для профсоюзов</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/documents-for-arrival/">Документы для заезда в санаторий</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/tarifs/">Цены на профсоюзные путевки</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/faq/">Вопрос-ответ</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="main-menu__root-item">
+                        <div class="main-menu__root-container">
+                            <a class="main-menu__root-link" href="/for_clients/">Клиентам</a>
+    
+                            <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__sublist">
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/types/">Отдых на любой вкус</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/where_to_buy/">Способы оплаты</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/unions/">Членам профсоюзов</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/agencies/">Туристическим компаниям</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/corporate/">Корпоративным клиентам</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/reviews/">Контроль качества обслуживания</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/for_objects/">Объектам размещения</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/glossary/">Словарь терминов</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/feedback/">Обратная связь</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/for_clients/poliklinika-fnpr/">Поликлиника ФНПР</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="main-menu__root-item"><a class="main-menu__root-link" href="/news/">НОВОСТИ И АКЦИИ</a></li>
+    
+                    <li class="main-menu__root-item"><a class="main-menu__root-link" href="/geo/">Наши курорты</a></li>
+    
+                    <li class="main-menu__root-item">
+                        <div class="main-menu__root-container">
+                            <a class="main-menu__root-link" href="/medical/">Лечение</a>
+    
+                            <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__sublist">
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/medical/programs/">Программы лечения</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/medical/advices/">Советы специалистов</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/medical/prirodnye-faktory/">Природные факторы</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="main-menu__root-item">
+                        <div class="main-menu__root-container">
+                            <a class="main-menu__root-link" href="/tickets/">Билеты</a>
+    
+                            <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__sublist">
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/tickets/train/">Ж/Д билеты</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/tickets/avia/">Авиабилеты</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="main-menu__root-item">
+                        <div class="main-menu__root-container">
+                            <a class="main-menu__root-link" href="/company/">О нас</a>
+    
+                            <button class="js-sublist-toggler main-menu__sublist-toggler" type="button" title="Открыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-down-icon" />
+                                </svg>
+                            </button>
+                        </div>
+    
+                        <ul class="main-menu__sublist">
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/sotrudnichestvo/">Сотрудничество</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/training/">Обучение и аттестация медицинских работников</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/management/">Руководство</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/reklama-i-pr">Реклама и PR</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/awards/">Наши награды</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/contacts/">Контакты</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/opportunities/">Вакансии</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/partners/">Партнеры</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/ob-aktsionernom-obshchestve/">Об Акционерном Обществе</a></li>
+                            <li class="main-menu__sublist-item"><a class="main-menu__sublist-link" href="/company/yubiley-kompanii/">Юбилей - нам 30 лет</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="main-menu__root-item"><a class="main-menu__root-link" href="/faq/">Вопрос-ответ</a></li>
+                </ul>
+    
+                <ul class="main-menu__service-list">
+                    <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=client">МОИ ЗАКАЗЫ</a></li>
+                    <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=agent">АГЕНТАМ</a></li>
+                    <li class="main-menu__service-item"><a class="main-menu__service-link" href="/cabinet/?cabinet=object">ОБЪЕКТАМ</a></li>
+                    <li class="main-menu__service-item"><a class="main-menu__service-link" href="/feedback/">НАПИШИТЕ НАМ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page__content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#home-icon" />
+                        </svg>
+                        Главная
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    Результаты поиска
+                </li>
+            </ul>
+
+            <h1>Результаты поиска</h1>
+
+            <div class="page__columns">
+                <div class="catalog-togglers">
+                    <button class="js-filter-opener button button--low button--secondary" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#filter-icon" />
+                        </svg>
+                        Фильтр
+                    </button>
+                    <button class="js-sorting-opener button button--low button--secondary" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#sort-icon" />
+                        </svg>
+                        Сортировка
+                    </button>
+                </div>
+
+                <div class="js-filter filter page__sidebar">
+                    <div class="search">
+                        <p class="search__title">
+                            Фильтр
+                    
+                            <button class="js-filter-closer search__closer" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#close-icon" />
+                                </svg>
+                            </button>
+                        </p>
+                    
+                        <form action="">
+                            <div class="input-group">
+                                <label class="input-label" for="region">Что ищем</label>
+                                <input class="input" id="region" type="text" name="" inputmode="text" placeholder="Санаторий, регион, профиль лечения">
+                            </div>
+                    
+                            <div class="input-group">
+                                <label class="input-label" for="date-in">Даты заезда/выезда</label>
+                                <div class="search-form__dates-container">
+                                    <input class="input" id="date-in" type="text" name="date_in" placeholder="Дата заезда">
+                                    <input class="input" id="date-out" type="text" name="date_out" placeholder="Дата выезда">
+                                </div>
+                            </div>
+                    
+                            <div class="input-group">
+                                <label class="input-label" for="numbers">Количество номеров</label>
+                                <input class="input" id="numbers" type="text" name="" inputmode="numeric" placeholder="Количество номеров">
+                            </div>
+                    
+                            <div class="search__section">
+                                <p class="search__section-title">Тип размещения</p>
+                    
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Мини-отель</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">База отдыха</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Курортная поликлиника</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Курортный комплекс</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Санаторий</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Курорт</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Профилакторий</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Гостиница</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Пансионат</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Гостевой дом</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Отель</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Бальнеогрязелечебница</span>
+                                </label>
+                            </div>
+                    
+                            <div class="search__section">
+                                <p class="search__section-title">Цена за ночь</p>
+                    
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">0&nbsp;руб. - 1&nbsp;500&nbsp;руб.</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">1&nbsp;500&nbsp;руб. - 2&nbsp;700&nbsp;руб.</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">2&nbsp;700&nbsp;руб. - 5&nbsp;500&nbsp;руб.</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">5&nbsp;500&nbsp;руб. - 8 000&nbsp;руб.</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">8&nbsp;000&nbsp;руб.&nbsp;+</span>
+                                </label>
+                            </div>
+                    
+                            <div class="search__section">
+                                <p class="search__section-title">Питание</p>
+                    
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Шведский стол</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Заказ по меню</span>
+                                </label>
+                            </div>
+                    
+                            <div class="search__section">
+                                <p class="search__section-title">Доп. сервис</p>
+                    
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Автостоянка</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Закрытый бассейн</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Бювет</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Детская площадка</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Конференц-зал</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Косметический салон</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Салон красоты</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Пляж</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Тренажёрный зал </span>
+                                </label>
+                            </div>
+                    
+                            <div class="search__section">
+                                <p class="search__section-title">Профиль лечения</p>
+                    
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Аллерго-иммунологические заболевания</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни глаза и его придаточного аппарата</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни женских половых органов</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни кожи и подкожной клетчатки</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни костно-мышечной системы и соединительной ткани</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни крови, кроветворных органов и хронические интоксикации</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни мочеполовой системы</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни нервной системы</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни органов дыхания</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни органов пищеварения</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни сердца</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни системы кровообращения</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни уха, горла, носа</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Болезни эндокринной системы, расстройства питания и нарушение обмена веществ</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Восстановление организма после COVID-19</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Коррекция веса</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Оздоровление</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Отдых (без лечения)</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Педиатрия</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Психические заболевания</span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="" name="">
+                                    <span class="checkbox__icon"></span>
+                                    <span class="checkbox__text">Стоматология</span>
+                                </label>
+                            </div>
+                    
+                            <div class="search__buttons">
+                                <button class="button button--low button--secondary" type="reset">Сбросить</button>
+                                <button class="button button--low button--primary" type="submit">Найти</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="page__inner-content">
+                    <div class="js-sorting sorting">
+                        <p class="sorting__title">
+                            Сортировка:
+
+                            <button class="js-sorting-closer sorting__closer" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#close-icon" />
+                                </svg>
+                            </button>
+                        </p>
+
+                        <div class="select-wrapper">
+                            <select class="select">
+                                <option>цена по возрастанию</option>
+                                <option>цена по убыванию</option>
+                                <option>по рейтингу</option>
+                                <option>по рекомендациям</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="catalog-list">
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_1.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--success"></span> Есть свободные места</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.9</span>
+                                        <a href="#">1 842 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Целебный Нарзан</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                        <p class="badge badge--beige">Оздоровление</p>
+                                    </div>
+
+                                    <p class="object-card__features">Питьевой нарзан · Бассейн · Лечебный парк</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__old-price">6 300 ₽</p>
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 5 400 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 450 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_2.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Убрать из избранного">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-filled-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">2 142 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Санаторий им. Кирова</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Грязелечение · Бассейн · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 900 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 410 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_3.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">1 330 отзывов</a> · <a href="#">Белокуриха</a>
+                                    </p>
+
+                                    <p class="object-card__title">Россия — Белокуриха</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Радон · Горный воздух · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 700 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 400 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_1.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--success"></span> Есть свободные места</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.9</span>
+                                        <a href="#">1 842 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Целебный Нарзан</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                        <p class="badge badge--beige">Оздоровление</p>
+                                    </div>
+
+                                    <p class="object-card__features">Питьевой нарзан · Бассейн · Лечебный парк</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__old-price">6 300 ₽</p>
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 5 400 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 450 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_2.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">2 142 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Санаторий им. Кирова</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Грязелечение · Бассейн · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 900 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 410 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_3.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">1 330 отзывов</a> · <a href="#">Белокуриха</a>
+                                    </p>
+
+                                    <p class="object-card__title">Россия — Белокуриха</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Радон · Горный воздух · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 700 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 400 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__column">
+                    <p class="footer__title">Меню</p>
+    
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Профсоюзам</a>
+                        </li>
+                        <li>
+                            <a href="#">Клиентам</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости и акции</a>
+                        </li>
+                        <li>
+                            <a href="#">Наши курорты</a>
+                        </li>
+                        <li>
+                            <a href="#">Лечение</a>
+                        </li>
+                        <li>
+                            <a href="#">Билеты</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Вопрос-ответ</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__column">
+                    <p class="footer__title">Офисы продаж</p>
+    
+                    <div class="footer__offices">
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Астрахани</a></p>
+                                <a class="footer-office__phone" href="tel:+78512547036">+7 (8512) 54-70-36</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Волгограде</a></p>
+                                <a class="footer-office__phone" href="tel:+78442383967">+7 (8442) 38-39-67</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Ростове-на-Дону</a></p>
+                                <a class="footer-office__phone" href="tel:+78632618624">+7 (863) 261-86-24</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Кисловодске</a></p>
+                                <a class="footer-office__phone" href="tel:+79383022599">+7 (938) 302-25-99</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Саранске</a></p>
+                                <a class="footer-office__phone" href="tel:+78342478676">+7 (8342) 47-86-76</a>
+                            </div>
+                        </div>
+    
+                        <div class="footer-office">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#pin-icon" />
+                            </svg>
+    
+                            <div>
+                                <p class="footer-office__title"><a href="#">в Москве</a></p>
+                                <a class="footer-office__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="footer__column">
+                    <p class="footer__title">Полезные ссылки</p>
+    
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">Членам профсоюзов</a>
+                        </li>
+                        <li>
+                            <a href="#">Туристическим агентствам</a>
+                        </li>
+                        <li>
+                            <a href="#">Корпоративным клиентам</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer__column">
+                    <p class="footer__title">Контакты</p>
+    
+                    <div class="footer__phones">
+                        <a class="footer__phone" href="tel:+74950698996">+7 (495) 069-89-96</a>
+    
+                        <a class="footer__phone" href="tel:+74956642328">+7 (495) 664-23-28</a>
+    
+                        <a class="footer__phone" href="tel:+78001002328">+7 (800) 100-23-28</a>
+                    </div>
+    
+                    <p class="footer__text">117342, г.&nbsp;Москва,<br> ул.&nbsp;Обручева, д.&nbsp;36, корп.&nbsp;2</p>
+    
+                    <p class="footer__title">Мы в соцсетях</p>
+    
+                    <div class="footer__socials">
+                        <a class="footer-social" href="#" target="_blank" title="Мы в MAX">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#max-icon" />
+                            </svg>
+                        </a>
+    
+                        <a class="footer-social" href="#" target="_blank" title="Мы Вконтакте">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#vk-icon" />
+                            </svg>
+                        </a>
+    
+                        <a class="footer-social" href="#" target="_blank" title="Мы в Telegram">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#tg-icon" />
+                            </svg>
+                        </a>
+                    </div>
+    
+                    <p class="footer__text">
+                        <b>Сведения о туроператоре</b><br>
+                        Наименование юридического лица: АО&nbsp;«СКО&nbsp;ФНПР «Профкурорт»<br>
+                        Реестровый номер: <a href="https://ev.economy.gov.ru/lk_exp/registry/to/1a26145d-cdd3-4309-90f2-73cbc41db27a" target="_blank">РТО&nbsp;022119</a>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Официальный сайт АО «СКО ФНПР «Профкурорт».</p>
+    
+                <p class="footer__developer">Разработка сайта - <a href="https://vsignal.ru/" target="_blank">Vsignal</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="recall" class="popup popup--recall">
+        <p class="popup__title">Обратный звонок</p>
+    
+        <p>Пожалуйста, укажите координаты для связи с Вами. В ближайшее время наш специалист свяжется с Вами.</p>
+    
+        <form class="recall-form" method="" action="">
+            <div class="radios">
+                <label class="input-label">Вы являетесь<span class="required">*</span></label>
+    
+                <label class="radio">
+                    <input id="tur_ag" type="radio" value="tur_ag" name="YOUARE">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">туристическим агентством</span>
+                </label>
+    
+                <label class="radio">
+                    <input id="prof_user" type="radio" value="prof_user" name="YOUARE">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">членом профсоюза</span>
+                </label>
+    
+                <label class="radio">
+                    <input id="priv_user" type="radio" value="priv_user" name="YOUARE">
+                    <span class="radio__icon"></span>
+                    <span class="radio__text">частным клиентом</span>
+                </label>
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="fio">Ваши фамилия, имя и отчество<span class="required">*</span></label>
+                <input class="input" id="fio" type="text" name="FIO" placeholder="Ваши фамилия, имя и отчество">
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="phone">Контактный телефон<span class="required">*</span></label>
+                <input class="input" id="phone" type="text" name="PHONE" placeholder="Контактный телефон">
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="email">Адрес электронный почты</label>
+                <input class="input" id="email" type="text" name="EMAIL" placeholder="Адрес электронный почты">
+            </div>
+    
+            <div class="input-group">
+                <label class="input-label" for="info">Дополнительная информация</label>
+                <textarea class="textarea" id="info" name="INFO" placeholder="Дополнительная информация"></textarea>
+            </div>
+    
+            <label class="checkbox">
+                <input type="checkbox" value="Y" name="AGREE">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text">Согласен на обработку <a href="/policy/" target="_blank">персональных данных</a></span>
+            </label>
+    
+            <button class="button button--success button--wide" type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/swiper-bundle.min.js"></script>
+    
+    <script src="js/air-datepicker.js"></script>
+    
+    <script src="js/main.js"></script>
+
+    <script src="js/search-from.js"></script>
+</body>
+
+</html>
