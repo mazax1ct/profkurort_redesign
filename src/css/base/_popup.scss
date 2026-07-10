@@ -8,14 +8,20 @@
     display: none;
     padding: 2rem 1.5rem;
     overflow: visible;
+    width: 100%;
 
     &--recall {
         max-width: 30rem;
     }
 
+    &--search-options {
+        max-width: 72.5rem;
+    }
+
     &__title {
         font-weight: 500;
         font-size: 1.5rem;
+        line-height: 1.15;
     }
 
     &__closer {

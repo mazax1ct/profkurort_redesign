@@ -26,6 +26,8 @@
 
     <link rel="stylesheet" href="css_plugins/jquery.fancybox.css" />
     
+    <link rel="stylesheet" href="css_plugins/air-datepicker.css" />
+    
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -251,14 +253,14 @@
                         <div class="main-slider__image">
                             <img src="images/content/main-slider/img.jpg" alt="">
                         </div>
-
+            
                         <div class="main-slider__slide container">
                             <p class="main-slider__title main-slider__title--big">Санаторно-курортное лечение по всей России</p>
-
+            
                             <div class="main-slider__text">
                                 <p>374 здравницы в 65 регионах — от целебных источников Кавминвод до морского побережья Крыма и хвойного воздуха Белокурихи</p>
                             </div>
-
+            
                             <ul class="main-slider__features">
                                 <li>
                                     <span class="icon icon--secondary icon--small">
@@ -295,13 +297,13 @@
                             </ul>
                         </div>
                     </div>
-
+            
                     <div class="swiper-slide">
                         <div class="main-slider__slide container">
                             <p class="pre-title pre-title--danger">Акция</p>
-
+            
                             <p class="main-slider__title">"Ребенок на доп.месте бесплатно" в&nbsp;санатории "Металлург" (г. Сочи, Краснодарский кр.)</p>
-
+            
                             <div class="main-slider__text">
                                 <a class="more-link" href="#">
                                     Подбронее
@@ -313,14 +315,14 @@
                         </div>
                     </div>
                 </div>
-
+            
                 <div class="main-slider__nav container">
                     <button class="js-main-slider-prev main-slider__prev" type="button" title="Назад">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#chevron-left-icon" />
                         </svg>
                     </button>
-
+            
                     <button class="js-main-slider-next main-slider__next" type="button" title="Вперёд">
                         <svg aria-hidden="true">
                             <use xlink:href="images/sprite.svg#chevron-right-icon" />
@@ -332,32 +334,308 @@
             <section class="page__section page__section--no-padding-bottom bg-white full-width">
                 <div class="container">
                     <div class="search-form">
-                        <p class="search-form__title">Найдите санаторий для отдыха и здоровья</p>
+                        <p class="search-form__title">Найдите санаторий для&nbsp;отдыха и&nbsp;здоровья</p>
                         <p class="search-form__text">Проверенные санатории, курортные отели и пансионаты России. Лечебные программы, питание и море — в одном поиске.</p>
-
+            
                         <form class="search-form__inner" action="">
                             <div class="search-form__region input-group">
                                 <label class="input-label" for="region">Поиск по запросу</label>
-                                <input class="input" id="region" type="text" name="" placeholder="Санаторий, регион, профиль лечения">
+                                <input class="input" id="region" type="text" name="" inputmode="text" placeholder="Санаторий, регион, профиль лечения">
                             </div>
-
+            
                             <div class="search-form__dates input-group">
-                                <label class="input-label" for="date">Даты заезда/выезда</label>
+                                <label class="input-label" for="date-in">Даты заезда/выезда</label>
                                 <div class="search-form__dates-container">
-                                    <input class="input" id="date" type="text" name="date_in" placeholder="Дата заезда">
-                                    <input class="input" type="text" name="date_out" placeholder="Дата выезда">
+                                    <input class="input" id="date-in" type="text" name="date_in" placeholder="Дата заезда">
+                                    <input class="input" id="date-out" type="text" name="date_out" placeholder="Дата выезда">
                                 </div>
                             </div>
-
+            
                             <div class="search-form__numbers input-group">
                                 <label class="input-label" for="numbers">Количество номеров</label>
-                                <input class="input" id="numbers" type="text" name="" placeholder="Количество номеров">
+                                <input class="input" id="numbers" type="text" name="" inputmode="numeric" placeholder="Количество номеров">
                             </div>
-
+            
+                            <div id="search-options" class="popup popup--search-options">
+                                <p class="popup__title">Дополнительные параметры</p>
+            
+                                <div class="search-form__options-grid">
+                                    <div>
+                                        <p class="search-form__options-title">Тип размещения</p>
+            
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Мини-отель</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">База отдыха</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Курортная поликлиника</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Курортный комплекс</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Санаторий</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Курорт</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Профилакторий</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Гостиница</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Пансионат</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Гостевой дом</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Отель</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Бальнеогрязелечебница</span>
+                                        </label>
+                                    </div>
+            
+                                    <div>
+                                        <p class="search-form__options-title">Цена за ночь</p>
+            
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">0&nbsp;руб. - 1&nbsp;500&nbsp;руб.</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">1&nbsp;500&nbsp;руб. - 2&nbsp;700&nbsp;руб.</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">2&nbsp;700&nbsp;руб. - 5&nbsp;500&nbsp;руб.</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">5&nbsp;500&nbsp;руб. - 8 000&nbsp;руб.</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">8&nbsp;000&nbsp;руб.&nbsp;+</span>
+                                        </label>
+                                    </div>
+            
+                                    <div>
+                                        <p class="search-form__options-title">Питание</p>
+            
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Шведский стол</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Заказ по меню</span>
+                                        </label>
+            
+                                        <p class="search-form__options-title">Доп. сервис</p>
+            
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Автостоянка</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Закрытый бассейн</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Бювет</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Детская площадка</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Конференц-зал</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Косметический салон</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Салон красоты</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Пляж</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Тренажёрный зал </span>
+                                        </label>
+                                    </div>
+            
+                                    <div>
+                                        <p class="search-form__options-title">Профиль лечения</p>
+            
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Аллерго-иммунологические заболевания</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни глаза и его придаточного аппарата</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни женских половых органов</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни кожи и подкожной клетчатки</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни костно-мышечной системы и соединительной ткани</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни крови, кроветворных органов и хронические интоксикации</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни мочеполовой системы</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни нервной системы</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни органов дыхания</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни органов пищеварения</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни сердца</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни системы кровообращения</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни уха, горла, носа</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Болезни эндокринной системы, расстройства питания и нарушение обмена веществ</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Восстановление организма после COVID-19</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Коррекция веса</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Оздоровление</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Отдых (без лечения)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Педиатрия</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Психические заболевания</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" name="">
+                                            <span class="checkbox__icon"></span>
+                                            <span class="checkbox__text">Стоматология</span>
+                                        </label>
+                                    </div>
+                                </div>
+            
+                                <button onclick="$.fancybox.close();" class="search-form__options-apply button button--primary" type="button">Применить</button>
+                            </div>
+            
                             <button class="search-form__submit button button--primary" type="submit">Подобрать</button>
                         </form>
-
-                        <button class="search-form__options" type="button">Дополнительные параметры</button>
+            
+                        <button class="search-form__options-toggler" data-fancybox="search-options" data-src="#search-options" type="button">Дополнительные параметры</button>
                     </div>
                 </div>
             </section>
@@ -366,7 +644,7 @@
                 <div class="container">
                     <div class="lead">
                         <p class="pre-title pre-title--danger">География</p>
-                        <h2>Лучшие курорты России и зарубежья</h2>
+                        <h2>Лучшие курорты России и&nbsp;зарубежья</h2>
                         <div class="lead__text-block">
                             <div class="lead__text">
                                 <p>374 здравницы в 65 регионах — от целебных источников Кавминвод до морского побережья Крыма и хвойного воздуха Белокурихи. Выберите направление, которое подходит именно вам.</p>
@@ -1532,9 +1810,13 @@
     
     <script src="js/swiper-bundle.min.js"></script>
     
+    <script src="js/air-datepicker.js"></script>
+    
     <script src="js/main.js"></script>
 
     <script src="js/main-slider.js"></script>
+
+    <script src="js/search-from.js"></script>
 </body>
 
 </html>

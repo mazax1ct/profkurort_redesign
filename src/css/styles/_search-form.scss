@@ -62,9 +62,8 @@
     &__dates-container {
         display: flex;
         flex-grow: 1;
-        //min-width: 248px;
+
         .input {
-            //min-width: 124px;
             &:first-child {
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
@@ -106,7 +105,7 @@
         }
     }
 
-    &__options {
+    &__options-toggler {
         @include active-area;
         @include button-reset;
         border-bottom: 1px dotted currentColor;
@@ -117,6 +116,42 @@
         @include hover {
             color: var(--secondary-color);
         }
+    }
+
+    &__options-grid {
+        display: grid;
+        gap: 1rem;
+        @media(min-width: $sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(min-width: $md) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .checkbox {
+            font-size: 0.875rem;
+
+            &:not(:last-child) {
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+
+    &__options-title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
+        &:not(:first-child) {
+            margin-top: 0.75rem;
+        }
+    }
+
+    &__options-apply {
+        bottom: 0;
+        margin-top: 1rem;
+        position: sticky;
+        top: auto;
+        width: 100%;
     }
 }
 
