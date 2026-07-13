@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Профкурорт</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    //= template/common/header.html
+
+    <main class="page__content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#home-icon" />
+                        </svg>
+                        Главная
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    Результаты поиска
+                </li>
+            </ul>
+
+            <h1>Результаты поиска</h1>
+
+            <div class="page__columns">
+                <div class="catalog-togglers">
+                    <button class="js-filter-opener button button--low button--secondary" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#filter-icon" />
+                        </svg>
+                        Фильтр
+                    </button>
+                    <button class="js-sorting-opener button button--low button--secondary" type="button">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#sort-icon" />
+                        </svg>
+                        Сортировка
+                    </button>
+                </div>
+
+                <div class="js-filter filter page__sidebar">
+                    //= template/search/search-form.html
+                </div>
+
+                <div class="page__inner-content">
+                    <div class="js-sorting sorting">
+                        <p class="sorting__title">
+                            Сортировка:
+
+                            <button class="js-sorting-closer sorting__closer" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#close-icon" />
+                                </svg>
+                            </button>
+                        </p>
+
+                        <div class="select-wrapper">
+                            <select class="select">
+                                <option>цена по возрастанию</option>
+                                <option>цена по убыванию</option>
+                                <option>по рейтингу</option>
+                                <option>по рекомендациям</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="catalog-list">
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_1.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--success"></span> Есть свободные места</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.9</span>
+                                        <a href="#">1 842 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Целебный Нарзан</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                        <p class="badge badge--beige">Оздоровление</p>
+                                    </div>
+
+                                    <p class="object-card__features">Питьевой нарзан · Бассейн · Лечебный парк</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__old-price">6 300 ₽</p>
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 5 400 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 450 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_2.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Убрать из избранного">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-filled-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">2 142 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Санаторий им. Кирова</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Грязелечение · Бассейн · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 900 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 410 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_3.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">1 330 отзывов</a> · <a href="#">Белокуриха</a>
+                                    </p>
+
+                                    <p class="object-card__title">Россия — Белокуриха</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Радон · Горный воздух · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 700 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 400 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_1.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--success"></span> Есть свободные места</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.9</span>
+                                        <a href="#">1 842 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Целебный Нарзан</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                        <p class="badge badge--beige">Оздоровление</p>
+                                    </div>
+
+                                    <p class="object-card__features">Питьевой нарзан · Бассейн · Лечебный парк</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__old-price">6 300 ₽</p>
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 5 400 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 450 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_2.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">2 142 отзыва</a> · <a href="#">Кисловодск</a>
+                                    </p>
+
+                                    <p class="object-card__title">Санаторий им. Кирова</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Грязелечение · Бассейн · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 900 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 410 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="object-card">
+                            <div class="object-card__image-block">
+                                <img src="images/content/objects/img_3.jpg" alt="">
+                                <div class="object-card__image-inner">
+                                    <div class="object-card__image-top">
+                                        <div class="object-card__badges">
+                                            <p class="badge badge--danger">Хит</p>
+                                            <p class="badge badge--warning">−20% ФНПР</p>
+                                        </div>
+
+                                        <button class="object-card__fav" type="button" title="Добавить в избранное">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#heart-icon" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--white"><span class="badge__indicator badge__indicator--warning"></span> Осталось мало мест</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="object-card__info-block">
+                                <div class="object-card__top-block">
+                                    <p class="object-card__rating-reviews">
+                                        <span class="object-card__rating" title="Рейтинг санатория">9.8</span>
+                                        <a href="#">1 330 отзывов</a> · <a href="#">Белокуриха</a>
+                                    </p>
+
+                                    <p class="object-card__title">Россия — Белокуриха</p>
+
+                                    <div class="object-card__badges">
+                                        <p class="badge badge--beige">Сердце и сосуды</p>
+                                        <p class="badge badge--beige">Опорно-двигательный</p>
+                                        <p class="badge badge--beige">Нервная система</p>
+                                    </div>
+
+                                    <p class="object-card__features">Радон · Горный воздух · SPA</p>
+                                </div>
+
+                                <div class="object-card__bottom-block">
+
+                                    <p class="object-card__price-block"><span class="object-card__price">от 4 700 ₽</span> за сутки</p>
+
+                                    <p class="object-card__credit">от 400 ₽/мес · 0%</p>
+
+                                    <div class="object-card__buttons">
+                                        <a class="button button--warning" href="#">Забронировать</a>
+
+                                        <a class="button button--outline" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    //= template/common/footer.html
+
+    //= template/common/popups.html
+
+    //= template/common/scripts.html
+
+    <script src="js/search-from.js"></script>
+</body>
+
+</html>

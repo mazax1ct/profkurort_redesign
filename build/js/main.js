@@ -3,14 +3,14 @@ $(document).on('click', '.js-menu-toggler', function () {
   const _this = $(this);
   if(!_this.hasClass('is-active')) {
     $('body').addClass('main-menu-open');
-    $('.main-menu').addClass('is-open');
+    $('.main-menu').fadeIn();
     _this.find('use').attr('xlink:href', 'images/sprite.svg#close-icon');
     _this.addClass('is-active');
   } else {
     _this.find('use').attr('xlink:href', 'images/sprite.svg#menu-icon');
     _this.removeClass('is-active');
     $('body').removeClass('main-menu-open');
-    $('.main-menu').removeClass('is-open');
+    $('.main-menu').fadeOut();
   }
 
   return false;

@@ -2,33 +2,43 @@
   color: var(--adp-color-other-month)
 }
 
-.air-datepicker-cell.-year-.-other-decade-:hover, .air-datepicker-cell.-day-.-other-month-:hover {
-  color: var(--adp-color-other-month-hover)
+@media (any-hover: hover) {
+
+  .air-datepicker-cell.-year-.-other-decade-:hover,
+  .air-datepicker-cell.-day-.-other-month-:hover {
+    color: var(--adp-color-other-month-hover)
+  }
 }
 
-.-disabled-.-focus-.air-datepicker-cell.-year-.-other-decade-, .-disabled-.-focus-.air-datepicker-cell.-day-.-other-month- {
+.-disabled-.-focus-.air-datepicker-cell.-year-.-other-decade-,
+.-disabled-.-focus-.air-datepicker-cell.-day-.-other-month- {
   color: var(--adp-color-other-month)
 }
 
-.-selected-.air-datepicker-cell.-year-.-other-decade-, .-selected-.air-datepicker-cell.-day-.-other-month- {
+.-selected-.air-datepicker-cell.-year-.-other-decade-,
+.-selected-.air-datepicker-cell.-day-.-other-month- {
   color: #fff;
   background: var(--primary-color)
 }
 
-.-selected-.-focus-.air-datepicker-cell.-year-.-other-decade-, .-selected-.-focus-.air-datepicker-cell.-day-.-other-month- {
+.-selected-.-focus-.air-datepicker-cell.-year-.-other-decade-,
+.-selected-.-focus-.air-datepicker-cell.-day-.-other-month- {
   background: var(--primary-color-hover)
 }
 
-.-in-range-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.air-datepicker-cell.-day-.-other-month- {
+.-in-range-.air-datepicker-cell.-year-.-other-decade-,
+.-in-range-.air-datepicker-cell.-day-.-other-month- {
   background-color: var(--adp-background-color-in-range);
   color: var(--adp-color)
 }
 
-.-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-, .-in-range-.-focus-.air-datepicker-cell.-day-.-other-month- {
+.-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-,
+.-in-range-.-focus-.air-datepicker-cell.-day-.-other-month- {
   background-color: var(--adp-background-color-in-range-focused)
 }
 
-.air-datepicker-cell.-year-.-other-decade-:empty, .air-datepicker-cell.-day-.-other-month-:empty {
+.air-datepicker-cell.-year-.-other-decade-:empty,
+.air-datepicker-cell.-day-.-other-month-:empty {
   background: none;
   border: none
 }
@@ -44,8 +54,10 @@
   z-index: 1
 }
 
-.air-datepicker-cell.-focus- {
-  background: var(--adp-cell-background-color-hover)
+@media (any-hover: hover) {
+  .air-datepicker-cell.-focus- {
+    background: var(--adp-cell-background-color-hover)
+  }
 }
 
 .air-datepicker-cell.-current- {
@@ -58,6 +70,7 @@
 }
 
 .air-datepicker-cell.-disabled- {
+  background: none;
   cursor: default;
   color: var(--adp-color-disabled)
 }
