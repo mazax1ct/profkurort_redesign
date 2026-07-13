@@ -15,6 +15,14 @@
     }
 }
 
+.filter {
+    .left-menu {
+        @media(max-width: $md - 0.02rem) {
+            display: none;
+        }
+    }
+}
+
 .search {
     @media(min-width: $md) {
         border-radius: 1rem;
@@ -239,6 +247,15 @@
             fill: var(--primary-color);
             height: 1.5rem;
             width: 1.5rem;
+        }
+    }
+}
+
+.section-info {
+    .page__sidebar {
+        img {
+            border-radius: 1rem;
+            width: 100%;
         }
     }
 }

@@ -1,0 +1,69 @@
+.cards-slider {
+    position: relative;
+    z-index: 1;
+
+    .swiper-slide {
+        display: flex;
+        height: auto;
+        position: relative;
+        z-index: 1;
+
+        .object-card {
+            width: 100%;
+        }
+    }
+
+    .swiper-pagination {
+        --swiper-pagination-color: var(--primary-color);
+        --swiper-pagination-bullet-inactive-color: var(--grey-color-dark);
+        position: static;
+    }
+
+    &__nav {
+        align-items: center;
+        display: flex;
+        height: 0;
+        justify-content: space-between;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 96px);
+        z-index: 1;
+        @media(max-width: 80rem - 0.02rem) {
+            display: none;
+        }
+    }
+
+    &__next,
+    &__prev {
+        @include button-reset;
+        align-items: center;
+        border-radius: 0.5rem;
+        background-color: rgba(#fff,0.5);
+        color: var(--primary-color);
+        display: flex;
+        height: 2.5rem;
+        justify-content: center;
+        transition: color 0.3s;
+        width: 2.5rem;
+
+        &:not(.swiper-button-disabled) {
+            @include hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        &.swiper-button-disabled {
+            cursor: default;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        svg {
+            fill: currentColor;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+}

@@ -32,11 +32,16 @@
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
-                    Результаты поиска
+                    <a class="breadcrumbs__link" href="#">
+                        Наши курорты
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    Санатории Тульской области
                 </li>
             </ul>
 
-            <h1>Результаты поиска</h1>
+            <h1>Санатории Тульской области</h1>
 
             <div class="page__columns">
                 <div class="catalog-togglers">
@@ -55,6 +60,14 @@
                 </div>
 
                 <div class="js-filter filter page__sidebar">
+                    <div class="left-menu">
+                        <h3><a href="/geo/tulskaya_oblast/">Тульская область</a></h3>
+                        <ul class="left-menu__list">
+                            <li class="left-menu__item"><a class="left-menu__link is-active" href="/geo/tulskaya_oblast/d_egnyshevka/">Егнышевка</a></li>
+                            <li class="left-menu__item"><a class="left-menu__link" href="/geo/tulskaya_oblast/d_krainka/">Краинка</a></li>
+                        </ul>
+                    </div>
+
                     //= template/search/search-form.html
                 </div>
 
@@ -422,6 +435,12 @@
                     </div>
                 </div>
             </div>
+
+            //= template/search/section-text.html
+
+            <p class="h2">Недавно просмотренные</p>
+
+            //= template/search/cards-slider.html
         </div>
     </main>
 
@@ -432,6 +451,8 @@
     //= template/common/scripts.html
 
     <script src="js/search-from.js"></script>
+
+    <script src="js/cards-slider.js"></script>
 </body>
 
 </html>
