@@ -18,6 +18,12 @@
         color: #fff;
     }
 
+    &--outline-beige {
+        border: 1px solid var(--beige-color-dark);
+        background-color: #fff;
+        font-weight: 500;
+    }
+
     &--primary {
         background-color: var(--primary-color-hover);
         color: #fff;

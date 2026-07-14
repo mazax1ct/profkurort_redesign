@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Профкурорт</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/common/favicon.html
+
+    //= template/common/fonts_preload.html
+
+    //= template/common/styles.html
+</head>
+
+<body class="page">
+    //= template/common/header.html
+
+    <main class="page__content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#home-icon" />
+                        </svg>
+                        Главная
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">
+                        Наши курорты
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">
+                        Краснодарский край
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="#">
+                        Сочи
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    Санаторий Адлеркурорт
+                </li>
+            </ul>
+
+            <div class="detail page__columns">
+                <div class="page__inner-content">
+                    <div class="detail__title-block">
+                        <button class="detail__fav" type="button" title="Добавить в избранное">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#heart-icon" />
+                            </svg>
+                        </button>
+
+                        <h1>Санаторий "Бальнео&shy;грязелечебница" 3***</h1>
+                    </div>
+
+                    <p class="detail__address">
+                        <svg aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#pin-icon" />
+                        </svg>
+                        <span>г. Сочи, ул. Ленина, д. 219, Краснодарский кр., 354364 - <a href="#">На карте</a></span>
+                    </p>
+
+                    <div class="detail__badges">
+                        <p class="badge badge--outline-beige">Сердце и сосуды</p>
+                        <p class="badge badge--outline-beige">Нервная система</p>
+                        <p class="badge badge--outline-beige">Оздоровление</p>
+                    </div>
+
+                    <div class="detail__menu">
+                        <a class="detail__menu-item" href="#">Программы</a>
+
+                        <a class="detail__menu-item" href="#">Номерной фонд</a>
+
+                        <a class="detail__menu-item" href="#">Контакты</a>
+
+                        <a class="detail__menu-item" href="#">Отзывы</a>
+
+                        <a class="detail__menu-item" href="#">Памятка</a>
+
+                        <a class="detail__menu-item" href="#">Прейскуранты</a>
+                    </div>
+
+                    <div class="js-detail-main detail__images swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a data-fancybox="images" href="images/content/detail/img_1.jpg">
+                                    <img src="images/content/detail/img_1_mid.jpg" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a data-fancybox="images" href="images/content/detail/img_2.jpg">
+                                    <img src="images/content/detail/img_2_mid.jpg" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <button class="detail__images-next swiper-button-next" type="button" title="Вперёд">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron-right-icon" />
+                            </svg>
+                        </button>
+
+                        <button class="detail__images-prev swiper-button-prev" title="Назад">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#chevron-left-icon" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div thumbsSlider="" class="js-detail-thumbs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/content/detail/img_1_small.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/content/detail/img_2_small.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page__sidebar">
+                    <div class="detail__side-block detail__rating-block">
+                        <p class="detail__rating" title="Рейтинг: 9.1">9.1</p>
+                        <p>Рейтинг основан<br> на <a href="#">79 отзывах</a></p>
+                    </div>
+
+                    <div class="detail__side-block detail__min-price-block">
+                        <p class="detail__min-price">от 14 134 ₽ <small>/ сутки</small></p>
+                        <a class="button button--warning button--wide" href="#">Забронировать номер</a>
+                        <p class="detail__stock">Осталось 7 вариантов</p>
+                    </div>
+
+                    <div class="detail__side-block">
+                        <a class="button button--outline button--wide" href="">Как добраться</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="h2">Недавно просмотренные</p>
+
+            //= template/search/cards-slider.html
+        </div>
+    </main>
+
+    //= template/common/footer.html
+
+    //= template/common/popups.html
+
+    //= template/common/scripts.html
+
+    <script src="js/detail.js"></script>
+
+    <script src="js/cards-slider.js"></script>
+</body>
+
+</html>
