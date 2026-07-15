@@ -28,6 +28,8 @@ $(document).on('click', '.js-tab', function () {
 
   if($(this).attr('data-tab') !== 'booking') {
     $('.detail__mobile-book').removeClass('hidden');
+  } else {
+    $('.detail__mobile-book').addClass('hidden');
   }
   return false;
 });
