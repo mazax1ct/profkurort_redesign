@@ -16,8 +16,9 @@ html {
     font-size: var(--base-font-size);
     height: 100%;
     scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: calc(var(--header-min-height) + 1rem);
     -webkit-text-size-adjust: 100%;
+    overscroll-behavior-y: none;
 
     &.is-overflow {
         scrollbar-gutter: stable;
@@ -105,9 +106,6 @@ html {
     }
 
     &__inner-content {
-        /*background-color: #fff;
-        border-radius: 0.75rem;
-        padding: 1.5rem clamp(1rem, calc(0.8182rem + 0.9091vw), 1.5rem);*/
         @media(min-width: $md) {
             width: calc(100% - var(--columns-gap) - var(--sidebar-width));
         }
@@ -316,6 +314,12 @@ html {
     }
 }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
 h1,
 h2,
 h3,
@@ -347,7 +351,7 @@ h2 {
     font-size: clamp(1.25rem, calc(0.9773rem + 1.3636vw), 1.5rem);
     font-weight: 600;
     line-height: 1.15;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     margin-top: 1.5em;
 
     &:last-child {

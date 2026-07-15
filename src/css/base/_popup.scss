@@ -6,7 +6,7 @@
     background-color: #fff;
     border-radius: 1rem;
     display: none;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
     overflow: visible;
     width: 100%;
 
@@ -16,6 +16,10 @@
 
     &--search-options {
         max-width: 72.5rem;
+    }
+
+    &--how-get {
+        max-width: 60rem;
     }
 
     &__title {
@@ -33,10 +37,13 @@
         height: 2.5rem;
         justify-content: center;
         opacity: 1;
-        right: 0;
-        top: 0;
-        transform: translate(50%, -50%);
+        right: -8px;
+        top: -8px;
         width: 2.5rem;
+        @media(min-width: 78rem) {
+            right: -16px;
+            top: -16px;
+        }
     }
 }
 
@@ -45,5 +52,13 @@
     .input-group,
     .radios {
         margin-bottom: 1rem;
+    }
+}
+
+.fancybox-slide--image {
+    .popup__closer {
+        @media(max-width: 78rem - 0.02rem) {
+            right: 0;
+        }
     }
 }

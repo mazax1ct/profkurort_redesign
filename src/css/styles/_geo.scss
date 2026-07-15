@@ -1,18 +1,6 @@
-.map {
-    align-items: center;
-    background-color: var(--grey-color);
-    display: flex;
-    height: 500px;
-    justify-content: center;
+.geo-map {
+    height: 35rem;
     margin-bottom: 2rem;
-    position: relative;
-    overflow: hidden;
-
-    &:empty {
-        &::after {
-            content: 'Загрузка...';
-        }
-    }
 }
 
 .geo-alphabeth {

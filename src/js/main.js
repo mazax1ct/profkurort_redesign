@@ -29,12 +29,3 @@ $(document).on('click', '.js-sublist-toggler', function () {
 
   return false;
 });
-
-//табы
-$(document).on('click', '.js-tab-button', function () {
-  $(this).closest('.tabs').find('.js-tab-button').removeClass('is-active');
-  $(this).addClass('is-active');
-  $(this).closest('.tabs').find('.tab').removeClass('is-active');
-  $(this).closest('.tabs').find('.tab[data-tab='+$(this).attr('data-tab')+']').addClass('is-active');
-  return false;
-});

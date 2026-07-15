@@ -4,7 +4,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-active {
   height: auto;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .fancybox-is-hidden {
@@ -166,7 +166,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-slide--html {
-  padding: 24px;
+  padding: 44px 12px;
 }
 
 .fancybox-content {
@@ -626,45 +626,6 @@ body.compensate-for-scrollbar {
   transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* Styling for Small-Screen Devices */
-@media all and (max-height: 576px) {
-  .fancybox-slide {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-
-  .fancybox-slide--image {
-    padding: 6px 0;
-  }
-
-  .fancybox-close-small {
-    right: -6px;
-  }
-
-  .fancybox-slide--image .fancybox-close-small {
-    background: #4e4e4e;
-    color: #f2f4f6;
-    height: 36px;
-    opacity: 1;
-    padding: 6px;
-    right: 0;
-    top: 0;
-    width: 36px;
-  }
-
-  .fancybox-caption {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  @supports (padding: max(0px)) {
-    .fancybox-caption {
-      padding-left: max(12px, env(safe-area-inset-left));
-      padding-right: max(12px, env(safe-area-inset-right));
-    }
-  }
-}
-
 /* Share */
 .fancybox-share {
   background: #f4f4f4;
@@ -867,19 +828,4 @@ body.compensate-for-scrollbar {
 
 .fancybox-thumbs__list a.fancybox-thumbs-active::before {
   opacity: 1;
-}
-
-/* Styling for Small-Screen Devices */
-@media all and (max-width: 576px) {
-  .fancybox-thumbs {
-    width: 110px;
-  }
-
-  .fancybox-show-thumbs .fancybox-inner {
-    right: 110px;
-  }
-
-  .fancybox-thumbs__list a {
-    max-width: calc(100% - 10px);
-  }
 }

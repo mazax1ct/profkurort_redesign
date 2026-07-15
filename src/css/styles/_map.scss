@@ -1,0 +1,14 @@
+.map {
+    align-items: center;
+    background-color: var(--grey-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    &:empty {
+        &::after {
+            content: 'Загрузка...';
+        }
+    }
+}

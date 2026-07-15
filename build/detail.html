@@ -278,22 +278,11 @@
             </ul>
 
             <div class="detail page__columns">
-                <div class="page__inner-content">
-                    <div class="detail__title-block">
-                        <button class="detail__fav" type="button" title="Добавить в избранное">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#heart-icon" />
-                            </svg>
-                        </button>
-
-                        <h1>Санаторий "Бальнео&shy;грязелечебница" 3***</h1>
-                    </div>
+                <div class="detail__content page__inner-content">
+                    <h1>Санаторий "Бальнео&shy;грязелечебница" 3***</h1>
 
                     <p class="detail__address">
-                        <svg aria-hidden="true">
-                            <use xlink:href="images/sprite.svg#pin-icon" />
-                        </svg>
-                        <span>г. Сочи, ул. Ленина, д. 219, Краснодарский кр., 354364 - <a href="#">На карте</a></span>
+                        Адрес: г. Сочи, ул. Ленина, д. 219, Краснодарский кр., 354364 - <a href="javascript:void(0)" data-fancybox="how-get-top" data-src="#how-get">На карте</a>
                     </p>
 
                     <div class="detail__badges">
@@ -302,73 +291,634 @@
                         <p class="badge badge--outline-beige">Оздоровление</p>
                     </div>
 
-                    <div class="detail__menu">
-                        <a class="detail__menu-item" href="#">Программы</a>
+                    <p class="detail__rating-block detail__rating-block--mobile">
+                        <span class="detail__rating" title="Рейтинг: 9.1">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#thumb-up-icon" />
+                            </svg>
+                            9.1
+                        </span>
 
-                        <a class="detail__menu-item" href="#">Номерной фонд</a>
+                        <span>Рейтинг основан<br> на <a href="#">79 отзывах</a></span>
+                    </p>
 
-                        <a class="detail__menu-item" href="#">Контакты</a>
+                    <div class="detail__images">
+                        <button class="detail__fav" type="button" title="Убрать из избранного">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#heart-filled-icon" />
+                            </svg>
+                        </button>
 
-                        <a class="detail__menu-item" href="#">Отзывы</a>
-
-                        <a class="detail__menu-item" href="#">Памятка</a>
-
-                        <a class="detail__menu-item" href="#">Прейскуранты</a>
-                    </div>
-
-                    <div class="js-detail-main detail__images swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a data-fancybox="images" href="images/content/detail/img_1.jpg">
-                                    <img src="images/content/detail/img_1_mid.jpg" />
-                                </a>
+                        <div class="js-detail-main detail__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a data-fancybox="images" href="images/content/detail/img_1.jpg">
+                                        <img src="images/content/detail/img_1_mid.jpg" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="images" href="images/content/detail/img_2.jpg">
+                                        <img loading="lazy" src="images/content/detail/img_2_mid.jpg" />
+                                    </a>
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <a data-fancybox="images" href="images/content/detail/img_2.jpg">
-                                    <img src="images/content/detail/img_2_mid.jpg" />
-                                </a>
-                            </div>
+
+                            <button class="detail__images-next swiper-button-next" type="button" title="Вперёд">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-right-icon" />
+                                </svg>
+                            </button>
+
+                            <button class="detail__images-prev swiper-button-prev" title="Назад">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#chevron-left-icon" />
+                                </svg>
+                            </button>
+
+                            <div class="swiper-pagination"></div>
                         </div>
 
-                        <button class="detail__images-next swiper-button-next" type="button" title="Вперёд">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chevron-right-icon" />
-                            </svg>
-                        </button>
-
-                        <button class="detail__images-prev swiper-button-prev" title="Назад">
-                            <svg aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#chevron-left-icon" />
-                            </svg>
-                        </button>
+                        <div thumbsSlider="" class="js-detail-thumbs detail__thumbs swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/content/detail/img_1_small.jpg" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/content/detail/img_2_small.jpg" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div thumbsSlider="" class="js-detail-thumbs swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/content/detail/img_1_small.jpg" />
+                    <div class="detail__mobile-book">
+                        <a class="js-booking-scroll button button--warning button--wide button--low" href="#detail-tabs">Посмотреть номера</a>
+                    </div>
+
+                    <div id="detail-tabs" class="detail__tabs">
+                        <div class="detail__menu">
+                            <a class="js-tab button button--primary button--low is-active" href="#" data-tab="description">Описание</a>
+
+                            <a class="js-tab button button--outline button--low" href="#" data-tab="programms">Программы</a>
+
+                            <a class="js-tab button button--outline button--low" href="#" data-tab="booking">Номера</a>
+
+                            <a class="js-tab button button--outline button--low" href="#" data-tab="contacts">Контакты</a>
+
+                            <a class="button button--outline button--low" href="#">Отзывы</a>
+
+                            <a class="button button--outline button--low" href="#">Памятка</a>
+
+                            <a class="button button--outline button--low" href="#">Цены</a>
+                        </div>
+
+                        <div class="detail__tabs">
+                            <div class="tab is-active" data-tab="description">
+                                <h2>Путёвки в Санаторий Адлеркурорт</h2>
+
+                                <p>
+                                    «Адлеркурорт» — является крупнейшим санаторием Черноморского побережья. Санаторий расположен в одном из самых тёплых, уютных и гостеприимных уголков Большого Сочи, на территории&nbsp;микрорайона «Курортный городок»
+                                    в
+                                    Адлерском жилом районе г. Сочи, где есть все для комфортного отдыха и лечения.&nbsp;
+                                </p>
+
+                                <p>
+                                    Санаторий состоит из 4 спальных корпусов, бассейна, курортной поликлиники, летней эстрады и кинотеатра. В пешей доступности от корпусов находятся морская набережная, пляжная полоса. Галечные пляжи («Коралл» и
+                                    («Дельфин-2»)
+                                    оборудованы и благоустроены: оснащены кабинами для переодевания, душами, туалетами. Шезлонги и зонты — бесплатные для гостей санатория.
+                                </p>
+
+                                <p>
+                                    Корпус&nbsp;«Коралл»***&nbsp;— 15 этажный корпус на берегу моря, оборудованный лифтами; номера&nbsp;Первой категории, Доступная среда, Студия, Люкс, Апартаменты.
+                                </p>
+
+                                <p>
+                                    Корпус&nbsp;«Дельфин»<b>***</b>&nbsp;— 15 этажный корпус&nbsp;на берегу моря, оборудованный&nbsp;лифтами; номера 1 категории, Люкс, Апартаменты.<br>
+                                    Корпус&nbsp;«Нептун»<b>***</b>&nbsp;— 5 этажный корпус, расположен рядом с корпусом «Дельфин» в парковой зоне, оборудован лифтами. В корпусе&nbsp;был проведен капитальный ремонт в 2023 году, номера двухкомнатные
+                                    Первой
+                                    категории и категории Джуниор Сюит.&nbsp;<br>
+                                    Корпус&nbsp;«Смена»&nbsp;— 4 этажный корпус&nbsp;с номерами Второй категории, с удобствами на блок (2+3), без лифта.&nbsp;
+                                </p>
+
+                                <p>
+                                    В санатории созданы все условия для детского отдыха. В корпусах «Коралл», «Дельфин», «Нептун» ежедневно работают детские комнаты.&nbsp;В программе детских комнат: изготовление поделок, рисование, обучающие
+                                    мастер-классы,
+                                    проведение настольных и развивающих игр, викторин, постановка кукольных спектаклей, просмотр мультфильмов, организация праздников и игровых программ.&nbsp;
+                                </p>
+
+                                <p>
+                                    На территории "Курортного городка" находятся крупнейший в стране океанариум, дельфинарий, разнообразные предприятия общественного питания, различные форматы торговли, предприятия индустрии развлечений для семей с
+                                    детьми и
+                                    всех, кто ценит танцы, спорт, живое музыкальное сопровождение, архитектурные памятники советского периода («Город сказок»: «Коралл», «Рыбки» Зураба Церетели).
+                                </p>
+
+                                <p>
+                                    Плавательный бассейн&nbsp;санатория «Адлеркурорт» является самым большим открытым подогреваемым бассейном с морской водой в Европе. Площадь зеркала воды = 3000 кв. м. глубина — 1,45 м. с выделенной
+                                    детской&nbsp;зоной,
+                                    где&nbsp;глубина&nbsp;0,9 м.&nbsp;Для самых маленьких гостей есть&nbsp;детская 2-х уровневая "плескательница" с горкой, глубиной 0,6 м.&nbsp;Для комфортного отдыха на территории бассейна расположены душевые,
+                                    санузел,
+                                    медпункт, фитобар,&nbsp;лежаки и теневые навесы, зонты.&nbsp;<br>
+                                    Режим работы&nbsp;бассейна в течении дня, с 9:00 до 19:00&nbsp;без выходных.<br>
+                                    Время работы бассейна может меняться в зависимости от сезона (01.06 по 31.08:&nbsp;с 9:00 до 21:00).<br>
+                                    Период работы бассейна- круглогодичный, кроме периодов закрытия на профилактические&nbsp;работы.&nbsp;
+                                </p>
+
+                                <p>
+                                    Для гостей организовано питание по типу «Шведский стол» с разнообразными горячими блюдами, салатами, сезонными овощами и фруктами, выпечкой и напитками. При необходимости диетсестра поможет спланировать
+                                    сбалансированное
+                                    питание на время отдыха и лечения.
+                                </p>
+
+                                <p>
+                                    В санатории «Адлеркурорт» работают два зала питания:
+                                </p>
+
+                                <p>
+                                    -гости, проживающие в корпусах «Коралл», "Нептун" и «Смена», питаются в столовой расположенной на 2-м этаже корпуса «Коралл».<br>
+                                    -гости, проживающие в корпусе «Дельфин», питаются в столовой расположенной на 2-м этаже корпуса «Дельфин».&nbsp;&nbsp;
+                                </p>
+
+                                <p>
+                                    В санатории&nbsp;работает <u>зал</u> <span style="color: #333333; border-width: 1pt; border-color: windowtext;"><u>VIP</u></span>
+                                    <u>-питания</u> (на 1 этаже корпуса «Коралл») для гостей проживающих в номерах категорий:<br>
+                                    <u>Коралл:</u> Люксы, Студии, Апартаменты;<br>
+                                    <u>Дельфин:</u> Люксы, Апартаменты;<br>
+                                    <u>Нептун:</u><u> &nbsp;</u>Джуниор сюиты.
+                                </p>
+
+                                <p>
+                                    Для проживающих в стандартных номерах эта услуга предоставляется за дополнительную плату.&nbsp;&nbsp;
+                                </p>
+
+                                <p>
+                                    <iframe width="100%" height="474" src="https://rutube.ru/play/embed/5665559c0382e74aa20f0d71d7ea3548" title="YouTube video player" frameborder="0"
+                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                                </p>
+
+                                <p>
+                                    Медицинский центр санатория предлагает гостям&nbsp;путевки&nbsp;для восстановления здоровья, укрепления иммунитета, повышения качества жизни. Есть уникальная возможность проконсультироваться со специалистом любого
+                                    профиля,
+                                    пройти диагностику и курс лечения. При наличии сердечно-сосудистых, кожных заболеваний, нервных расстройств, болезней желудка, органов дыхания и костно-мышечной системы к услугам отдыхающих — более 50 врачей высшей
+                                    категории, бальнеолечение, грязелечение, плазмолифтинг, соляная пещера, озонотерапия, массажи и другие медицинские процедуры к услугам гостей санатория.&nbsp;
+                                </p>
+
+                                <p>
+                                    У отдыхающих в санатории «Адлеркурорт» есть уникальная возможность приобрести путевку с «Мацестой».&nbsp;<br>
+                                </p>
+
+                                <p>
+                                    Легендарный сероводородный источник – Мацеста расположен между Сочи и Адлером. Вода источника относится к самым редким среди минеральных вод, она содержит 20 химических компонентов. Это настоящая природная аптека с
+                                    уникальным набором качеств.
+                                </p>
+
+                                <p>
+                                    Как работает сероводород? Через кожу и при дыхании он поступает в организм больного, где начинает воздействовать на клетки и ткани. Сосуды расширяются, кожа краснеет, кровь циркулирует быстрее. Сероводород
+                                    буквально
+                                    пропитывает кожу, после чего кровь приливает к внутренним органам. В целом, за время приема одной ванны происходят радикальные изменения в том, как кровь распределяется по организму. Она пробуждает ткани и приносит
+                                    в
+                                    них
+                                    кислород. При этом тело полностью расслаблено и отдыхает. Неудивительно, что всего 4 сероводородные ванны дают заметный положительный результат.&nbsp;Своим гостям для получения процедур, санаторий предлагает
+                                    трансфер
+                                    «Адлеркурорт» – «Мацеста» и «Мацеста» – «Адлеркурорт».&nbsp;&nbsp;<br>
+                                </p>
+
+                                <p>
+                                    <iframe width="100%" height="474" src="https://rutube.ru/play/embed/6a20ac46bfaa2e7fba84a899398341de" frameborder="0" allow="clipboard-write; autoplay" webkitallowfullscreen="" mozallowfullscreen=""
+                                      allowfullscreen=""></iframe>
+                                </p>
+
+                                <p>
+                                    <b>Вместимость</b><br>
+                                    Корпус&nbsp;<b>«Коралл»</b>: 936 мест<br>
+                                    Корпус&nbsp;<b>«Дельфин»</b>: 996 мест<br>
+                                    Корпус&nbsp;<b>«Нептун»</b>: 156&nbsp;мест<br>
+                                    Корпус&nbsp;<b>«Смена»</b>: 315 мест
+                                </p>
+
+                                <p>
+                                    <b>Расчетный час</b><br>
+                                    <b>Заезд с </b>14:00<br>
+                                    <b>Выезд до </b>12:00.
+                                </p>
+
+                                <p>
+                                    <b>Условия приема детей</b><br>
+                                    Дети принимаются с любого возраста.<br>
+                                    Лечение детям предоставляется с 4-х лет.<br>
+                                </p>
+
+                                <p>
+                                    <b>Питание</b><br>
+                                    Трехразовое питание по системе&nbsp;«шведский стол».
+                                </p>
+
+                                <p>
+                                    <b>Лечебный профиль:</b><br>
+                                    - заболевания системы кровообращения;<br>
+                                    - заболевания органов дыхания;<br>
+                                    - заболевания мочеполовой системы;<br>
+                                    - заболевания пищеварительной системы;<br>
+                                    - заболевания сердечно-сосудистой системы;<br>
+                                    - функциональные расстройства центральной и периферической нервной системы;<br>
+                                    - кожные заболевания;<br>
+                                    - заболевания опорно-двигательного аппарата.
+                                </p>
+
+                                <p>
+                                    Перечень необходимых для заезда в санаторий документов можно посмотреть в разделе <a href="//www.profkurort.ru/geo/krasnodarskiy_kray/sochi/adlerkurort/notes/">«Памятка».</a>
+                                </p>
+
+                                <h2>Доступный сервис</h2>
+
+                                <div class="detail__service">
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Теннис настольный
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Массажное кресло
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Аптека
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Банкетный зал
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Бар
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Открытый бассейн
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Библиотека
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Детская площадка
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Детская комната
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Камера хранения
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Бильярд
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Кинозал
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Конференц-зал
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Косметический салон
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Прачечная
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Автостоянка
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Сауна
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Спортплощадка
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Спутниковое ТВ
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Тренажёрный зал
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Wi-Fi
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Фитобар
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Теннисный корт
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Пляж
+                                    </p>
+
+                                    <p class="detail__service-item">
+                                        <span class="detail__service-icon">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#image-icon" />
+                                            </svg>
+                                        </span>
+
+                                        Танцевальный зал
+                                    </p>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="images/content/detail/img_2_small.jpg" />
+
+                            <div class="tab" data-tab="programms">
+                                <h2>Программы пребывания в Санатории Адлеркурорт</h2>
+
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181172/">Программа «Общетерапевтическая»</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181175/">Программа «Послеожоговая»</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181178/">Программа «СМАРТ»</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181173/">Программа «Чистая кожа»</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181176/">Программа «Оздоровительная»</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181179/">Программа «Общетерапевтическая с Мацестой»</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181174/">Программа «Реабилитация пациентов после COVID-19</a>
+                                </p>
+                                <p>
+                                    <a href="/geo/krasnodarskiy_kray/sochi/adlerkurort/treatment/181177/">Программа «СМАРТ с Мацестой»</a>
+                                </p>
+                            </div>
+
+                            <div class="tab" data-tab="booking">
+                                <h2>Цены и номерной фонд Санатория Адлеркурорт</h2>
+
+                                <p class="h1">тут букинг</p>
+                            </div>
+
+                            <div class="tab" data-tab="contacts">
+                                <h2>Как добраться до Санатория Адлеркурорт</h2>
+
+                                <p>
+                                    <b><i>от аэропорта</i></b> г. Адлер - 6 км, на&nbsp;маршрутных&nbsp;такси №105, 105с, 105а, 558&nbsp;до остановки "Известия"&nbsp;или «Курортный городок" (для гостей, заезжающих в корпус "Коралл"), до остановки
+                                    "АЗС"
+                                    или
+                                    "Фрегат" (для гостей, заезжающих в корпусы "Дельфин", "Нептун"&nbsp;и "Смена");&nbsp;Скоростной электропоезд «Ласточка» до станции&nbsp;<a href="https://rasp.yandex.ru/station/9613269/"
+                                      target="_blank">о.п.&nbsp;Известия</a>
+                                </p>
+
+                                <p>
+                                    <b><i>от железнодорожного&nbsp;вокзала</i></b> г. Адлер - 3 км, на&nbsp;маршрутных&nbsp;такси №105,&nbsp;105а,105с, 105э, 517, 550, 551, 552, 555, 558,115, 560&nbsp;до остановки "Известия" (для гостей, заезжающих в
+                                    корпус
+                                    "Коралл"),&nbsp;до остановки "АЗС" или "Фрегат"(для гостей, заезжающих в корпусы "Дельфин", "Нептун"&nbsp;и "Смена"). Скоростной электропоезд «Ласточка» до станции&nbsp;<a
+                                      href="https://rasp.yandex.ru/station/9613269/" target="_blank">о.п.&nbsp;Известия</a>
+                                </p>
+
+                                <p><b>Адрес:</b><br>г. Сочи, ул. Ленина, д. 219, Краснодарский кр., 354364</p>
+
+                                <div class="map detail__contact-map"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="page__sidebar">
-                    <div class="detail__side-block detail__rating-block">
-                        <p class="detail__rating" title="Рейтинг: 9.1">9.1</p>
-                        <p>Рейтинг основан<br> на <a href="#">79 отзывах</a></p>
+                    <!--<div class="detail__side-block">
+                        <button class="detail__fav-button" type="button">
+                            <span>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#heart-filled-icon" />
+                                </svg>
+                            </span>
+
+                            Убрать из избранного
+                        </button>
+                    </div>-->
+
+                    <div class="detail__side-block">
+                        <p class="detail__rating-block">
+                            <span class="detail__rating" title="Рейтинг: 9.1">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#thumb-up-icon" />
+                                </svg>
+                                9.1
+                            </span>
+
+                            <span>Рейтинг основан<br> на <a href="#">79 отзывах</a></span>
+                        </p>
                     </div>
 
-                    <div class="detail__side-block detail__min-price-block">
+                    <div class="detail__side-block">
                         <p class="detail__min-price">от 14 134 ₽ <small>/ сутки</small></p>
-                        <a class="button button--warning button--wide" href="#">Забронировать номер</a>
+                        <a class="js-booking-scroll button button--warning button--wide" href="#detail-tabs">Забронировать номер</a>
                         <p class="detail__stock">Осталось 7 вариантов</p>
                     </div>
 
                     <div class="detail__side-block">
-                        <a class="button button--outline button--wide" href="">Как добраться</a>
+                        <div class="map detail__map"></div>
+
+                        <button class="button button--outline button--wide" type="button" data-fancybox="how-get" data-src="#how-get">Как добраться</button>
+
+                        <div id="how-get" class="popup popup--how-get">
+                            <div class="how-get">
+                                <div class="how-get__map map"></div>
+
+                                <div class="how-get__text">
+                                    <p class="h3">Как добраться до Санатория Адлеркурорт</p>
+
+                                    <p><b><i>Адрес:</i></b> г. Сочи, ул. Ленина, д. 219, Краснодарский кр., 354364</p>
+
+                                    <p>
+                                        <b><i>от аэропорта</i></b> г. Адлер - 6 км, на&nbsp;маршрутных&nbsp;такси №105, 105с, 105а, 558&nbsp;до остановки "Известия"&nbsp;или «Курортный городок" (для гостей, заезжающих в корпус "Коралл"), до остановки
+                                        "АЗС" или "Фрегат" (для гостей, заезжающих в корпусы "Дельфин", "Нептун"&nbsp;и "Смена");&nbsp;Скоростной электропоезд «Ласточка» до станции&nbsp;<a href="https://rasp.yandex.ru/station/9613269/"
+                                          target="_blank">о.п.&nbsp;Известия</a>
+                                    </p>
+
+                                    <p>
+                                        <b><i>от железнодорожного&nbsp;вокзала</i></b> г. Адлер - 3 км, на&nbsp;маршрутных&nbsp;такси №105,&nbsp;105а,105с, 105э, 517, 550, 551, 552, 555, 558,115, 560&nbsp;до остановки "Известия" (для гостей,
+                                        заезжающих в корпус "Коралл"),&nbsp;до остановки "АЗС" или "Фрегат"(для гостей, заезжающих в корпусы "Дельфин", "Нептун"&nbsp;и "Смена"). Скоростной электропоезд «Ласточка» до станции&nbsp;<a
+                                          href="https://rasp.yandex.ru/station/9613269/" target="_blank">о.п.&nbsp;Известия</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail__side-block">
+                        <p class="h3">Расчетный час</p>
+
+                        <p class="detail__time">
+                            <svg aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#clock-icon" />
+                            </svg>
+
+                            <span>
+                                <b>Заезд</b> с 14:00<br>
+                                <b>Выезд</b> до 12:00
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>
