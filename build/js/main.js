@@ -29,3 +29,12 @@ $(document).on('click', '.js-sublist-toggler', function () {
 
   return false;
 });
+
+$("[data-fancybox]").fancybox({
+		afterShow: function() {
+      $('html').addClass('stop-scroll')
+		},
+    afterClose: function() {
+      $('html').removeClass('stop-scroll')
+    }
+	});

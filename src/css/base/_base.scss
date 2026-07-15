@@ -18,10 +18,17 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-min-height) + 1rem);
     -webkit-text-size-adjust: 100%;
-    overscroll-behavior-y: none;
 
     &.is-overflow {
         scrollbar-gutter: stable;
+    }
+
+    &.stop-scroll {
+        overscroll-behavior-y: none;
+
+        body {
+            overscroll-behavior-y: none;
+        }
     }
 }
 
@@ -35,7 +42,6 @@ html {
     line-height: 1.5;
     min-height: 100%;
     overflow-x: hidden;
-    overscroll-behavior-y: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     text-rendering: optimizeLegibility;
