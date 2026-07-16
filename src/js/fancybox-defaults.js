@@ -13,3 +13,12 @@ $.fancybox.defaults.clickSlide = 'close';
 $.fancybox.defaults.clickOutside = true;
 $.fancybox.defaults.wheel = false;
 $.fancybox.defaults.btnTpl.smallBtn = '<button data-fancybox-close class="popup__closer fancybox-button fancybox-close-small" type="button" title="{{CLOSE}}"><svg aria-hidden="true"><use xlink:href="images/sprite.svg#close-icon" /></svg></button>';
+
+$('[data-fancybox]').fancybox({
+	afterShow: function() {
+    $('html').addClass('stop-scroll')
+	},
+  afterClose: function() {
+    $('html').removeClass('stop-scroll')
+  }
+});
